@@ -62,8 +62,14 @@ li a:hover:not(.active) {
     left: 400px;
 }
 
+.login-form {
+    position: relative;
+    left: 400px;
+}
+
 .form-group {
-	width: 500px;
+    width: 500px;
+    margin: 25px 0;
 }
 
 .required-field {
@@ -75,6 +81,12 @@ li a:hover:not(.active) {
 }
 
 .create-acc {
+    display: block;
+    position: relative;
+    left: 600px;
+}
+
+.login-acc {
     display: block;
     position: relative;
     left: 600px;
