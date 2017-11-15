@@ -44,3 +44,18 @@ li a:hover:not(.active) {
 .active {
     background-color: green;
 }
+
+.register-form {
+	width: 500px;
+	display: block;
+	position: absolute;
+	left: 400px;
+}
+
+.required-field {
+    font-size: 17px;
+    color: darkred;
+    display: block;
+    position: absolute;
+    right: 0;
+}
