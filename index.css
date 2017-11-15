@@ -91,3 +91,10 @@ li a:hover:not(.active) {
     position: relative;
     left: 600px;
 }
+
+.maintenance-text {
+    font-size: 40px;
+    display: block;
+    text-align: center;
+    margin: 40px 0;
+}
