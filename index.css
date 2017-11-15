@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .h2 {
     font-size: 25px;
 }
@@ -5,18 +6,48 @@
 .mainLogo {
 	max-width: 50%;
 	display: block;
+=======
+.slogan {
+    position: relative;
+    left: 365px;
+    margin: 50px 0;
+    font-size: 30px;
+}
+
+.header {
+    position: relative;
+    margin: 30px 0;
+}
+
+.mainLogo {
+	max-width: 40%;
+    display: block;
+    position: absolute;
+    left: 350px;
+>>>>>>> ed1970779ca0e736fb58eb8b3664936469cdaa40
 }
 
 .miniLogo {
 	width: 100px;
+<<<<<<< HEAD
 	display: block;
+=======
+    display: block;
+    position: relative;
+    left: 100px;
+>>>>>>> ed1970779ca0e736fb58eb8b3664936469cdaa40
 }
 
 ul {
 	width: 166,1px;
 	position: absolute;
+<<<<<<< HEAD
 	right: 10px;
 	top: 0;
+=======
+	right: 100px;
+	top: -10px;
+>>>>>>> ed1970779ca0e736fb58eb8b3664936469cdaa40
     list-style-type: none;
     margin: 20px 0;
     padding: 0;
@@ -46,16 +77,37 @@ li a:hover:not(.active) {
 }
 
 .register-form {
+<<<<<<< HEAD
 	width: 500px;
 	display: block;
 	position: absolute;
 	left: 400px;
+=======
+    position: relative;
+    left: 400px;
+}
+
+.form-group {
+	width: 500px;
+>>>>>>> ed1970779ca0e736fb58eb8b3664936469cdaa40
 }
 
 .required-field {
     font-size: 17px;
     color: darkred;
     display: block;
+<<<<<<< HEAD
     position: absolute;
     right: 0;
 }
+=======
+    position: relative;
+    left: 1100px;
+}
+
+.create-acc {
+    display: block;
+    position: relative;
+    left: 600px;
+}
+>>>>>>> ed1970779ca0e736fb58eb8b3664936469cdaa40
