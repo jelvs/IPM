@@ -16,33 +16,52 @@
         
         <title>Register</title>
     </head>
-    
+
     <body>
-    	<a href="../IPM/index.html"><img src="logo.png" class="miniLogo" alt="MiniLogo"></a>
-    
-        <ul>
-		    <li> <a class="active" href="../IPM/register.html"> Register </a> </li>
-		    <li> <a href="../IPM/login.html"> Login </a> </li>
-	    </ul>
-	    
+		<div class="header">
+			<a href="../IPM/index.html"><img src="logo.png" class="miniLogo" alt="MiniLogo"></a>
+						
+			<ul>
+				<li> <a class="active" href="../IPM/register.html"> Register </a> </li>
+				<li> <a href="../IPM/login.html"> Login </a> </li>
+			</ul>
+		</div>
+    	
 	    <form class="register-form">
+			<div class="form-group" action="/action_page.php">
+				<input type="file" name="pic" accept="image/*">
+				<input type="submit" value="Upload Image">
+			</div>
 			<div class="form-group">
-				<input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"placeholder="Username">
+				<input type="text" class="form-control" id="inputUsername" placeholder="Username">
 				<small id="requiredField" class="form-text text-muted">(*)</small>
 			</div>
   			<div class="form-group">
-    			<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+    			<input type="text" class="form-control" id="inputEmail" placeholder="Email">
     			<small id="requiredField" class="form-text text-muted">(*)</small>
   			</div>
   			<div class="form-group">
-				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				<input type="password" class="form-control" id="inputPassword" placeholder="Password">
 				<small id="requiredField" class="form-text text-muted">(*)</small>
 			</div>
-			<div class="required-field">
-				(*) Field Required
+			<div class="form-group">
+				<input type="password" class="form-control" id="inputPassword2" placeholder="Repeat Password">
+				<small id="requiredField" class="form-text text-muted">(*)</small>
 			</div>
-  		</form>
-	    
+			<div class="form-group">
+				<input type="date" class="form-control" id="inputBirthDate" placeholder="Birth Date">
+				<small id="requiredField" class="form-text text-muted">(*)</small>
+			</div>
+		</form>
+		  
+		<div class="required-field">
+			(*) Field Required
+		</div>
+		
+		<div class="create-acc">
+			<input type="submit" value="Create Account">
+		</div>
+		
     </body>
 
 </html>
