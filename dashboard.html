@@ -18,12 +18,97 @@
     </head>
     
     <body>
-        <div class="header">
-    	    <a href="../IPM/index.html"><img src="logo.png" class="miniLogo" alt="MiniLogo"></a>
-    	
+        <div class="page-header">
+            <a href="../IPM/index.html">
+                <img src="logo.png" class="miniLogo" alt="MiniLogo">
+            </a>
+        
+            <div class="search-box">
+                <input type="text" class="form-control" placeholder="Insert music/album...">
+                <button class="search-button" type="button">Search!</button>
+            </div>
+        
             <ul>
-		        <li> <a href="../IPM/logout.html"> Logout </a> </li>
+                <li>
+                    <a href="../IPM/logout.html"> Logout </a>
+                </li>
             </ul>
+        </div>
+
+        
+        <div class="col-lg-3">
+            <div class="left-sidebar">
+                <ul class="list-group">
+                    <a class="title"> Linked apps: </a>
+                    <li class="list-group-item"> Youtube </li>
+                    <li class="list-group-item"> Spotify </li>
+                </ul>
+
+                <ul class="list-group">
+                    <a class="title"> Local music: </a>
+                    <li class="list-group-item"> Songs </li>
+                    <li class="list-group-item"> Artists </li>
+                    <li class="list-group-item"> Albums </li>
+                    <li class="list-group-item"> Recently played </li>
+                </ul>
+
+                <ul class="list-group">
+                    <a class="title"> My playlists: </a>
+                    <li class="list-group-item"> New Jazz Vibe </li>
+                    <li class="list-group-item"> Local Hits </li>
+                    <li class="list-group-item"> Smooth Funk </li>
+                </ul>
+
+            </div>
+        </div>
+
+        
+        <div class="col-lg-6">
+            <div class="main-content">
+                <a class="dashboard-title"> Local: </a>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Add</th>
+                            <th>Title</th>
+                            <th>Artist</th>
+                            <th>Date added</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="glyphicon glyphicon-plus-sign"></span></td>
+                            <td>Californication</td>
+                            <td>Red Hot Chili Peppers</td>
+                            <td>dd-mm-yyyy</td>
+                        </tr>
+                        <tr>
+                            <td><span class="glyphicon glyphicon-plus-sign"></span></td>
+                            <td>Back in Black</td>
+                            <td>AC/DC</td>
+                            <td>dd-mm-yyyy</td>
+                        </tr>
+                        <tr>
+                            <td><span class="glyphicon glyphicon-plus-sign"></span></td>
+                            <td>B.Y.O.B</td>
+                            <td>System of a Down</td>
+                            <td>dd-mm-yyyy</td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+            </div>
+        </div>
+
+
+        <div class="col-lg-3">
+            <div class="right-sidebar">
+                <ul class="list-group">
+                    <a class="title"> Friends online: </a>
+                    <li class="list-group-item"> José </li>
+                    <li class="list-group-item"> Maria </li>
+                </ul>
+            </div>
         </div>
 
     </body>
