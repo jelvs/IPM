@@ -3,31 +3,32 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
+
+        <!-- bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">        
         <!--JS and jQuery-->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-        <!-- bootstrap-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         
         <link rel="stylesheet" type="text/css" href="index.css">
         
         <title>Register</title>
     </head>
 
-    <body>
+	<body>
 		<div class="header">
-			<a href="../IPM/index.html"><img src="logo.png" class="miniLogo" alt="MiniLogo"></a>
-						
+			<a href="index.html">
+				<img src="logo.png" class="miniLogo" alt="MiniLogo">
+			</a>
+	
 			<ul>
-				<li> <a class="active" href="../IPM/register.html"> Register </a> </li>
-				<li> <a href="../IPM/login.html"> Login </a> </li>
+				<li><a class="active" href="register.html"> Register </a></li>
+				<li><a href="login.html"> Login </a></li>
 			</ul>
 		</div>
-    	
-	    <form class="register-form">
+	
+		<form class="register-form">
 			<div class="form-group" action="/action_page.php">
 				<input type="file" name="pic" accept="image/*">
 				<input type="submit" value="Upload Image">
@@ -36,11 +37,11 @@
 				<input type="text" class="form-control" id="inputUsername" placeholder="Username">
 				<small id="requiredField" class="form-text text-muted">(*)</small>
 			</div>
-  			<div class="form-group">
-    			<input type="text" class="form-control" id="inputEmail" placeholder="Email">
-    			<small id="requiredField" class="form-text text-muted">(*)</small>
-  			</div>
-  			<div class="form-group">
+			<div class="form-group">
+				<input type="text" class="form-control" id="inputEmail" placeholder="Email">
+				<small id="requiredField" class="form-text text-muted">(*)</small>
+			</div>
+			<div class="form-group">
 				<input type="password" class="form-control" id="inputPassword" placeholder="Password">
 				<small id="requiredField" class="form-text text-muted">(*)</small>
 			</div>
@@ -53,15 +54,15 @@
 				<small id="requiredField" class="form-text text-muted">(*)</small>
 			</div>
 		</form>
-		  
+	
 		<div class="required-field">
 			(*) Field Required
 		</div>
-		
+	
 		<div class="create-acc">
 			<input type="submit" value="Create Account">
 		</div>
-		
-    </body>
+	
+	</body>
 
 </html>

@@ -4,50 +4,49 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
+        <!-- bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <!--JS and jQuery-->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-        <!-- bootstrap-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <!-- FA -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
         
+        <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="index.css">
 
         <!-- Player -->
         <script src="scripts/player.js" type="text/javascript"></script>
+        
         <title>Dashboard</title>
+    
     </head>
     
     <body>
-        <div class="page-header">
-            <a href="../IPM/index.html">
-                <img src="logo.png" class="miniLogo" alt="MiniLogo">
-            </a>
-        
+        <div class="header">
+            <a href="index.html"><img src="logo.png" class="miniLogo" alt="MiniLogo"></a>
+    
             <div class="search-box">
                 <input type="text" class="form-control" placeholder="Insert music/album...">
                 <button class="search-button" type="button">Search!</button>
             </div>
-        
+    
             <ul>
-                <li>
-                    <a href="../IPM/logout.html"> Logout </a>
-                </li>
+                <li><a href="logout.html"> Logout </a></li>
             </ul>
         </div>
-
-        
-        <div class="col-lg-3">
+    
+    
+        <div class="col-xs-12 col-md-3">
             <div class="left-sidebar">
                 <ul class="list-group">
                     <a class="title"> Linked apps: </a>
                     <li class="list-group-item"> Youtube </li>
                     <li class="list-group-item"> Spotify </li>
                 </ul>
-
+    
                 <ul class="list-group">
                     <a class="title"> Local music: </a>
                     <li class="list-group-item"> Songs </li>
@@ -55,19 +54,19 @@
                     <li class="list-group-item"> Albums </li>
                     <li class="list-group-item"> Recently played </li>
                 </ul>
-
+    
                 <ul class="list-group">
                     <a class="title"> My playlists: </a>
                     <li class="list-group-item"> New Jazz Vibe </li>
                     <li class="list-group-item"> Local Hits </li>
                     <li class="list-group-item"> Smooth Funk </li>
                 </ul>
-
+    
             </div>
         </div>
-
-        
-        <div class="col-lg-6">
+    
+    
+        <div class="col-xs-12 col-md-6">
             <div class="main-content">
                 <a class="dashboard-title"> Local: </a>
                 <table class="table">
@@ -81,42 +80,66 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><span class="glyphicon glyphicon-plus-sign"></span></td>
+                            <td>
+                                <span class="glyphicon glyphicon-plus-sign"></span>
+                            </td>
                             <td>Californication</td>
                             <td>Red Hot Chili Peppers</td>
                             <td>dd-mm-yyyy</td>
                         </tr>
                         <tr>
-                            <td><span class="glyphicon glyphicon-plus-sign"></span></td>
+                            <td>
+                                <span class="glyphicon glyphicon-plus-sign"></span>
+                            </td>
                             <td>Back in Black</td>
                             <td>AC/DC</td>
                             <td>dd-mm-yyyy</td>
                         </tr>
                         <tr>
-                            <td><span class="glyphicon glyphicon-plus-sign"></span></td>
+                            <td>
+                                <span class="glyphicon glyphicon-plus-sign"></span>
+                            </td>
                             <td>B.Y.O.B</td>
                             <td>System of a Down</td>
                             <td>dd-mm-yyyy</td>
                         </tr>
                     </tbody>
                 </table>
-        
+
+                <div class="form-group">
+                    <label for="partyList">Party: </label>
+                    <select class="form-control" id="musicApps">
+                        <option>List of Party's</option>
+                        <option>Home Study</option>
+                        <option>Home Party</option>
+                        <option>Geek friends</option>
+                    </select>
+                </div>
+
+                <div class="connSpeakers">
+                    <ul class="list-group">
+                        <a class="title"> Connected Speakers: </a>
+                        <li class="list-group-item"> Kitchen </li>
+                        <li class="list-group-item"> Living Room </li>
+                    </ul>
+                </div>
+    
+                <div class="media">
+                    <i class="fa fa-backward fa-3x" id="backward"></i>
+                    <i class="fa fa-stop-circle-o fa-3x" id="stop"></i>
+                    <i class="fa fa-pause-circle-o fa-3x invisible" id="pause"></i>
+                    <i class="fa fa-play-circle-o fa-3x" id="play"></i>
+                    <i class="fa fa-forward fa-3x" id="forward"></i>
+                    <audio controls played preload="metadata" id="player">
+                        <source src="media/Californication_RHCP.mp3" type="audio/mpeg">
+                        <source src="media/BackInBlack_ACDC.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+                    </audio>
+                </div>
+    
             </div>
         </div>
-        <div class="media">
-            <i class="fa fa-backward fa-3x" id="backward"></i>
-            <i class="fa fa-stop-circle-o fa-3x" id="stop"></i>
-            <i class="fa fa-pause-circle-o fa-3x invisible" id="pause"></i>
-            <i class="fa fa-play-circle-o fa-3x" id="play"></i>
-            <i class="fa fa-forward fa-3x" id ="forward"></i>
-            <audio controls played preload="metadata" id="player">
-                <source src="media/Californication_RHCP.mp3" type="audio/mpeg">
-                <source src="media/BackInBlack_ACDC.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-
-        <div class="col-lg-3">
+    
+        <div class="col-xs-12 col-md-6">
             <div class="right-sidebar">
                 <ul class="list-group">
                     <a class="title"> Friends online: </a>
@@ -125,7 +148,7 @@
                 </ul>
             </div>
         </div>
-        
+    
     </body>
-
-</html>
+    
+    </html>
