@@ -11,9 +11,13 @@
 
         <!-- bootstrap-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <!-- FA -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
         
         <link rel="stylesheet" type="text/css" href="index.css">
-        
+
+        <!-- Player -->
+        <script src="scripts/player.js" type="text/javascript"></script>
         <title>Dashboard</title>
     </head>
     
@@ -99,7 +103,18 @@
         
             </div>
         </div>
-
+        <div class="media">
+            <i class="fa fa-backward fa-3x" id="backward"></i>
+            <i class="fa fa-stop-circle-o fa-3x" id="stop"></i>
+            <i class="fa fa-pause-circle-o fa-3x invisible" id="pause"></i>
+            <i class="fa fa-play-circle-o fa-3x" id="play"></i>
+            <i class="fa fa-forward fa-3x" id ="forward"></i>
+            <audio controls played preload="metadata" id="player">
+                <source src="media/Californication_RHCP.mp3" type="audio/mpeg">
+                <source src="media/BackInBlack_ACDC.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
 
         <div class="col-lg-3">
             <div class="right-sidebar">
@@ -110,7 +125,7 @@
                 </ul>
             </div>
         </div>
-
+        
     </body>
 
 </html>
