@@ -17,45 +17,72 @@
     </head>
     
     <body>
-        <div class="header">
-            <a href="index.html"><img src="logo.png" class="miniLogo" alt="MiniLogo"></a>
-    
-            <ul>
-                <li><a href="register.html"> Register </a></li>
-                <li><a class="active" href="login.html"> Login </a></li>
-            </ul>
-        </div>
-    
-        <form class="login-form">
-            <div class="form-group">
-                <label for="externalLogin">Login through app:</label>
-                <select class="form-control" id="musicApps">
-                    <option>Youtube</option>
-                    <option>Spotify</option>
-                    <option>SoundCloud</option>
-                    <option>AppleMusic</option>
-                    <option>Deezer</option>
-                    <option>Shazam</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" id="inputUsernameEmail" placeholder="Username or Email">
-                <small id="requiredField" class="form-text text-muted">(*)</small>
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                <small id="requiredField" class="form-text text-muted">(*)</small>
-            </div>
-        </form>
-    
-        <div class="required-field">
-            (*) Field Required
-        </div>
-    
-        <div class="login-acc">
-            <input type="submit" value="Login">
-        </div>
-    
-    </body>
 
+        <div class="header">
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-lg-2">
+                    <a href="index.html"><img src="logo.png" class="mainLogo" alt="MainLogo"></a>
+                </div>
+                        
+                <div class="col-sm-12 col-md-6 col-lg-8">
+                </div>
+                        
+                <div class="col-sm-12 col-md-3 col-lg-2">
+                    <ul>
+                        <li><a href="register.html"> Register </a></li>
+                        <li><a class="active" href="login.html"> Login </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="padding-top: 40px;">
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-lg-2" id="left-sidebar">
+                </div>
+        
+                <div class="col-sm-12 col-md-6 col-lg-8" id="main">
+                    <div class="row">
+                        <form class="login-form">
+                            <div class="form-group">
+                                <label for="externalLogin">Login through app:</label>
+                                <select class="form-control" id="musicApps">
+                                    <option>Youtube</option>
+                                    <option>Spotify</option>
+                                    <option>SoundCloud</option>
+                                    <option>AppleMusic</option>
+                                    <option>Deezer</option>
+                                    <option>Shazam</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="inputUsernameEmail" placeholder="Username or Email">
+                                <small id="requiredField" class="form-text text-muted">(*)</small>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                <small id="requiredField" class="form-text text-muted">(*)</small>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6" style="padding:20px;">
+                            <div class="login-acc">
+                                <input type="submit" value="Login">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="required-field">
+                                (*) Field Required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-sm-12 col-md-3 col-lg-2" id="right">
+                </div>
+        
+            </div>
+        </div>
+    </body>
 </html>
