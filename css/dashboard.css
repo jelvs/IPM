@@ -12,3 +12,8 @@
 .list-group {
     padding: 20px;
 }
+
+audio {
+    margin:0 15px 0 14px;
+    width:600px;
+}

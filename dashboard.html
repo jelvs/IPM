@@ -7,17 +7,23 @@
         <!--JS and jQuery-->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-        <!-- bootstrap-->
+        <!-- BootStrap-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-        <!-- FA -->
+        <!-- FontAwesome -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- SweetAlert -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.3/sweetalert2.all.min.js"></script>
+        
         
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+        <script src="scripts/dashboard.js" type="text/javascript"></script>
 
         <!-- Player -->
         <script src="scripts/player.js" type="text/javascript"></script>
+        
+        
         
         <title>Dashboard</title> 
     </head>
@@ -46,23 +52,23 @@
                 <div class="col-sm-12 col-md-3 col-lg-2" id="left-sidebar">
                     <div class="row">
                         <ul class="list-group">
-                            <a class="title"> Linked apps: </a>
+                            <h4 class="title"> Linked apps </h4>
                             <li class="list-group-item"> Youtube </li>
                             <li class="list-group-item"> Spotify </li>
                         </ul>
                     </div>
                     <div class="row">
                         <ul class="list-group">
-                            <a class="title"> Local music: </a>
-                            <li class="list-group-item"> Songs </li>
-                            <li class="list-group-item"> Artists </li>
-                            <li class="list-group-item"> Albums </li>
-                            <li class="list-group-item"> Recently played </li>
+                            <h4 class="title"> Local music </h4>
+                            <li class="list-group-item"> Songs: </li>
+                            <li class="list-group-item"> Artists: </li>
+                            <li class="list-group-item"> Albums: </li>
+                            <li class="list-group-item"> Recently played: </li>
                         </ul>
                     </div>
                     <div class="row">
                         <ul class="list-group">
-                            <a class="title"> My playlists: </a>
+                            <h4 class="title"> My playlists </h4>
                             <li class="list-group-item"> New Jazz Vibe </li>
                             <li class="list-group-item"> Local Hits </li>
                             <li class="list-group-item"> Smooth Funk </li>
@@ -71,41 +77,19 @@
                 </div>    
                 <div class="col-sm-12 col-md-6 col-lg-8" id="main">
                     <div class="row">
-                        <a class="dashboard-title"> Local: </a>
+                        <h4 class="dashboard-title"> Playlist </h4>
                         <table class="table table-dark">
                             <thead>
                                 <tr>
-                                    <th>Add</th>
                                     <th>Title</th>
                                     <th>Artist</th>
+                                    <th>Album</th>
+                                    <th>Duration</th>
                                     <th>Date added</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <span class="glyphicon glyphicon-plus-sign"></span>
-                                    </td>
-                                    <td>Californication</td>
-                                    <td>Red Hot Chili Peppers</td>
-                                    <td>dd-mm-yyyy</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="glyphicon glyphicon-plus-sign"></span>
-                                    </td>
-                                    <td>Back in Black</td>
-                                    <td>AC/DC</td>
-                                    <td>dd-mm-yyyy</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="glyphicon glyphicon-plus-sign"></span>
-                                    </td>
-                                    <td>B.Y.O.B</td>
-                                    <td>System of a Down</td>
-                                    <td>dd-mm-yyyy</td>
-                                </tr>
+                                <div class="TablePlaylistSongs"></div>
                             </tbody>
                         </table>
                     </div>
