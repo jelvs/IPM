@@ -9,14 +9,14 @@ body {
 }
 
 .slogan {
-    font-size: 80px;
+    font-size: 60px;
     text-align: center
 }
 
 .centerimg {
     display:block;
     margin: auto;
-    width: 70%;
+    width: 50%;
 
 
 }
@@ -46,11 +46,11 @@ body {
 
 ul {
     list-style-type: none;
-    margin: 40px ;
+    margin:  1px ;
     padding: 10;
-    overflow: hidden;
+    overflow:  hidden;
     background-color: #333;
-    font-size: 17px;
+    font-size: 30px;
 }
 
 li {
@@ -61,7 +61,7 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 12px 20px;
     text-decoration: none;
 }
 

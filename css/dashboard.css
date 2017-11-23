@@ -14,6 +14,18 @@ body {
     left: 100px;
 }
 
+.playerbox{
+
+  margin: 200px;
+  width: 1250px;
+    background-color: darkgrey;
+
+}
+
+.media{
+  margin: 50px;
+}
+
 .list-group {
     padding: 20px;
 }
