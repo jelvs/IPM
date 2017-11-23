@@ -17,7 +17,6 @@ $(document).ready(function () {
     $("button").click(function () {
         $.post("demo_test_post.asp",
             {
-                
             },
             function (data, status) {
                 alert("Account successfully created!");
@@ -26,10 +25,10 @@ $(document).ready(function () {
 });
 
 
-function submitRegister() {
+/*function submitRegister() {
     document.getElementById("registerForm").submit();
     alert(document.registerForm.username);
-}
+}*/
 
 
 function registerValidation() {
@@ -42,9 +41,14 @@ function registerValidation() {
         if (validateUser(username)) {
             if (validateEmail(email)) {
                 if (validatePassword(password, password2)) {
-                    alert('Form Succesfully Submitted');
-                    window.location.reload()
+                    //alert('Form Succesfully Submitted');
+                    swal({
+                        title: "Account created successfully!",
+                        width: 600,
+                        padding: 100,
+                    });
                     return true;
+
                 }
             }
         }
@@ -53,8 +57,13 @@ function registerValidation() {
 
 function validateUser(username) {
     var existent;
-    if (username == existent) {
-        alert("It seems the username is already in use :(");
+    if (username === existent) {
+        //alert("It seems the username is already in use :(");
+        swal({
+            title: 'It seems the username is already in use :(',
+            width: 600,
+            padding: 100,
+        });
         //username.focus();
         return false;
     }
@@ -67,18 +76,27 @@ function validateEmail(email) {
         return true;
     }
     else {
-        alert("It seems the email is invalid :(");
+        //alert("It seems the email is invalid :(");
+        swal({
+            title: 'It seems the email is invalid :(',
+            width: 600,
+            padding: 100,
+        });
         //email.focus();
         return false;
     }
 }
 
 function validatePassword(password, password2) {
-
     if (password === password2) {
-        alert("Passwords don't match");
-        //password.focus()
-        return false;
+        return true;
     }
-    return true;
+    //alert("It seems the passwords don't match :(");
+    swal({
+        title: "It seems the passwords don't match :(",
+        width: 600,
+        padding: 100,
+    });
+    //password.focus()
+    return false;
 }

@@ -11,19 +11,17 @@ body {
 	width: 100px;
     display: block;
     position: absolute;
-    left: 100px;
+    left: 50px;
 }
 
 .playerbox{
-
-  margin: 200px;
-  width: 1250px;
+    margin: 200px;
+    width: 1250px;
     background-color: darkgrey;
-
 }
 
 .media{
-  margin: 50px;
+    margin: 50px;
 }
 
 .list-group {
@@ -31,6 +29,6 @@ body {
 }
 
 audio {
-    margin:0 15px 0 14px;
-    width:600px;
+    margin: 0 15px 0 14px;
+    width: 600px;
 }
