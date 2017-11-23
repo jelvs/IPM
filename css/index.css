@@ -2,7 +2,6 @@
     padding: 50px 100px;
 }
 
-
 body {
     background-color: aliceblue;
 
@@ -17,8 +16,6 @@ body {
     display:block;
     margin: auto;
     width: 50%;
-
-
 }
 
 .text1 {
@@ -27,12 +24,7 @@ body {
     margin: 50px ;
     text-align: center;
     color: grey;
-
-
 }
-
-
-
 
 .mainLogo {
 	max-width: 40%;
@@ -82,4 +74,8 @@ li a:hover:not(.active) {
     font-size: 40px;
     text-align: center;
     margin: 40px 0;
+}
+
+.form-control{
+    margin-top: 30px;
 }
