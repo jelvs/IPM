@@ -8,8 +8,7 @@ function loginValidation() {
                 //alert('Form Succesfully Submitted');
                 swal({
                     title: "Login successfully!",
-                    width: 600,
-                    padding: 100,
+                    type: 'success'
                 });
                 return true;
             }
@@ -17,31 +16,49 @@ function loginValidation() {
     }
 }
 
+
 function validateUser(usernameEmail) {
     var existent;
     if (usernameEmail === existent) {
         return true;
     }
-    //alert("It seems the username is already in use :(");
-    swal({
-        title: "It seems your username isn't registed in the system :(",
-        width: 600,
-        padding: 100,
-    });
-    //username.focus();
-    return false;
+    else if (usernameEmail.value.length === 0) {
+        swal({
+            title: "Please insert some username or email...",
+            type: 'error'
+        });
+        return false;
+    }
+    else {
+        //alert("It seems the username is already in use :(");
+        swal({
+            title: "It seems your username isn't registed in the system :(",
+            type: 'error'
+        });
+        //username.focus();
+        return false;
+    }
 }
+
 
 function validatePassword(password) {
     if (password === username.getPassword()) {
         return true;
     }
-    //alert("It seems the passwords don't match :(");
-    swal({
-        title: "It seems your password is incorrect :(",
-        width: 600,
-        padding: 100,
-    });
-    //password.focus()
-    return false;
+    else if (email.value.length === 0) {
+        swal({
+            title: "Please insert some email...",
+            type: 'error'
+        });
+        return false;
+    }
+    else {
+        //alert("It seems the passwords don't match :(");
+        swal({
+            title: "It seems your password is incorrect :(",
+            type: 'error'
+        });
+        //password.focus()
+        return false;
+    }
 }
