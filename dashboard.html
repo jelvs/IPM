@@ -57,11 +57,14 @@
                     <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                     <p id="name"></p>
                     <script>
-                    function getName(name) {
-                        this.name = name;
-                    }    
-                    var x = new getName("John")
-                    document.getElementById("name").innerHTML = x.name; 
+                        function getName(name) {
+                            this.name = name;
+                        }
+                        var j = new getName("John");
+                        var j2 = new getName("José");
+                        var m = new getName("Maria");
+                        var r = new getName("Rodrigo");
+                        document.getElementById("name").innerHTML = j.name;
                     </script>
                 </div>
             </div>

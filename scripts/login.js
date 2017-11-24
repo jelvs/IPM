@@ -66,6 +66,19 @@ function validatePassword(password) {
 }
 
 function getNameOfUser() {
-    var name = document.activeElement.loginForm.usernameEmail;
-    return name;
+    var name = document.loginForm.usernameEmail;
+    
+    var j = "jos";
+    var m = "mar";
+    var r = "rod";
+
+    if(name.includes(j)) {
+        return "José";
+    }
+    else if(name.includes(m)) {
+        return "Maria";
+    }
+    else if(name.includes(r)){
+        return "Rodrigo";
+    }
 }
