@@ -4,7 +4,6 @@
 
 body {
     background-color: aliceblue;
-
 }
 
 .mainLogo {
@@ -18,7 +17,7 @@ body {
 }
 
 .playerbox{
-    //width: 1250px;
+    /*width: 1250px;*/
     background-color: darkgrey;
 }
 
@@ -27,6 +26,7 @@ body {
 }
 
 .list-group {
+    padding-bottom: 30px; 
     padding-left: 20px;
 }
 
