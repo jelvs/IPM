@@ -64,3 +64,8 @@ function validatePassword(password) {
         return false;
     }
 }
+
+function getNameOfUser() {
+    var name = document.activeElement.loginForm.usernameEmail;
+    return name;
+}

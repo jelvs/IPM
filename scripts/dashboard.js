@@ -51,3 +51,7 @@ $(document).ready(function(){
     
     fillTable();
 });
+
+function getUser() {
+    return "Rodrigo";
+}
