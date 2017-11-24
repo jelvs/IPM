@@ -100,14 +100,19 @@ function validatePassword(password, password2) {
 
 function show_confirm()
 {
-    var r=confirm("Do you wish to Upload this Image??");
-    if (r==true)
-    {
-    return true;
-    }
-    else
-    {
-    return false;
-    }
-    return false;
+  swal({
+  position: 'middle',
+  type: 'success',
+  title: 'Your Photo has been Saved! it will be used as your Profile Picture by Default.',
+  showConfirmButton: true,
+
+  })
+}
+
+window.onload=function(){
+  document.getElementById("submit").style.display='none';
+}
+
+function showButton(){
+  document.getElementById("submit").style.display="block";
 }

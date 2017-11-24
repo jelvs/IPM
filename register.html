@@ -56,12 +56,11 @@
 						<form class="register-form" name="registerForm">
 							<div class="form-group" action="/action_page.php">
                 <img id="blah"  width="100" height="100" />
-                <form id="add" action="confirm.php" method="post">
-                    <input type="file" name="pic" accept="image/*"
-                        onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
-                    <input type="submit" name="submit" value="Submit"
-                        onclick='return show_confirm();'/>
-                </form>
+
+                    <input type="file"name="photo" accept="image/*"
+                        onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])" onclick="showButton()"/>
+                    <input type="button" id="submit" name="submit" value="Submit"  onclick='return show_confirm();'/>
+
 
 
 
