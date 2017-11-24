@@ -108,11 +108,11 @@ function show_confirm()
 
   })
 }
-
+//botao upload
 window.onload=function(){
   document.getElementById("submit").style.display='none';
 }
-
+//botao upload
 function showButton(){
   document.getElementById("submit").style.display="block";
 }
