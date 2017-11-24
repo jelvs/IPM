@@ -14,6 +14,10 @@
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <!-- SweetAlert -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.3/sweetalert2.all.min.js"></script>
+        <!-- Moment -->
+        <script src="scripts/moment.js"></script>
+        
+        
 
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
@@ -30,12 +34,16 @@
         <div class="header">
             <div class="row">
                 <div class="col-sm-12 col-md-3 col-lg-2">
-                    <a href="index.html"><img src="logo.png" class="miniLogo" alt="MiniLogo"></a>
+                    <a href="index.html"><img src="logo.png" class="mainLogo" alt="MainLogo" style="position: relative; left: 30px;"></a> 
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-8">
-                    <div class="search-box">
-                        <input type="text" class="form-control" placeholder="Insert music/album...">
-                        <button class="search-button" type="button">Search!</button>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Search for music/album...">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button">Go!</button>
+                          </span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-2">
@@ -45,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid" style="padding-top: 40px;">
+        <div class="container-fluid" style="padding-top: 20;">
             <div class="row">
                 <div class="col-sm-12 col-md-3 col-lg-2" id="left-sidebar">
                     <div class="row">
@@ -58,10 +66,10 @@
                     <div class="row">
                         <ul class="list-group">
                             <h4 class="title"> Local music </h4>
-                            <li class="list-group-item"> Songs: </li>
-                            <li class="list-group-item"> Artists: </li>
-                            <li class="list-group-item"> Albums: </li>
-                            <li class="list-group-item"> Recently played: </li>
+                            <li class="list-group-item" id="localSongs"> Songs: </li>
+                            <li class="list-group-item" id="localArtists"> Artists: </li>
+                            <li class="list-group-item" id="localAlbums"> Albums: </li>
+                            <li class="list-group-item" id="recentlyPlayed"> Recently played: </li>
                         </ul>
                     </div>
                     <div class="row">
@@ -108,29 +116,23 @@
                             </ul>
                         </div>
                     </div>
-                    <table frame="box" class="playerbox">
-                        <thead>
-                            <th>
-                                <div class="row" id="media">
-                                    <div class="col-sm-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
-                    
-                                        <!--<i class="fa fa-pause-circle-o fa-2x invisible" id="pause"></i>-->
-                                        <!--<i class="fa fa-play-circle-o fa-2x" id="play"></i>-->
-                                        <i class="fa fa-stop-circle-o fa-2x" id="stop"></i>
-                                        <i class="fa fa-backward fa-2x" id="backward"></i>
-                                        <audio controls played preload="metadata" id="player">
-                                            <source src="media/Californication_RHCP.mp3" type="audio/mpeg">
-                                            <source src="media/BackInBlack_ACDC.mp3" type="audio/mpeg"> Your browser does not support the audio element.
-                                        </audio>
-                    
-                                        <i class="fa fa-forward fa-2x" id="forward"></i>
-                    
-                                    </div>
-                                </div>
-                            </th>
-                        </thread>
-                    </table>
+                    <div class="row alert alert-dark" role="alert" id="media">
+                        <div class="col-sm-12 col-md-10 offset-md-1">
+                            <div><marquee>Now playing: <div id="nowPlaying"></div></marquee></div>
+                            <hr>
+                            <!--<i class="fa fa-pause-circle-o fa-2x invisible" id="pause"></i>-->
+                            <!--<i class="fa fa-play-circle-o fa-2x" id="play"></i>-->
+                            <i class="fa fa-stop-circle-o fa-2x" id="stop"></i>
+                            <i class="fa fa-backward fa-2x" id="backward"></i>
+                            <audio controls played preload="metadata" id="player">
+                                <source src="media/Californication_RHCP.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
 
+                            <i class="fa fa-forward fa-2x" id="forward"></i>
+
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-2" id="right">
                     <ul class="list-group">

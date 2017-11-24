@@ -79,13 +79,14 @@ function validateUser(username) {
 }
 
 function validateEmail(email) {
+    console.log(email.value);
     var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (email.value.match(mailFormat)) {
         return true;
     }
-    else if (email.length === 0) {
+    else if (email.length == 0) {
         swal({
-            title: "Please insert some email..",
+            title: "Please insert some email...",
             width: 600,
             padding: 100,
         });
@@ -95,8 +96,7 @@ function validateEmail(email) {
         //alert("It seems the email is invalid :(");
         swal({
             title: "It seems the email is invalid :(",
-            width: 600,
-            padding: 100,
+            type: "error"
         });
         //email.focus();
         return false;
