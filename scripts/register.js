@@ -8,12 +8,14 @@ function registerValidation() {
         if (validateUser(username)) {
             if (validateEmail(email)) {
                 if (validatePassword(password, password2)) {
-                    //alert('Form Succesfully Submitted');
-                    swal({
-                        title: "Account created successfully!",
-                        type: 'success'
-                    });
-                    return true;
+
+                      //alert('Form Succesfully Submitted');
+                      swal({
+                          title: "Account created successfully!",
+                          type: 'success'
+
+                        });
+                        return true;
 
                 }
             }
@@ -69,7 +71,14 @@ function validateEmail(email) {
 
 function validatePassword(password, password2) {
     if (password.value === password2.value) {
-        return true;
+      if (password.value.length <= 6 && password2.value.length <=6) {
+          swal({
+              title: "Your password isn't Strong enough!!!!  Help us keep it safe Use at least 6 Characters.",
+              type: 'error'
+          });
+          return false;
+      }
+      return true;
     }
     else if (password.value.length === 0) {
         swal({
@@ -87,4 +96,18 @@ function validatePassword(password, password2) {
         //password.focus()
         return false;
     }
+}
+
+function show_confirm()
+{
+    var r=confirm("Do you wish to Upload this Image??");
+    if (r==true)
+    {
+    return true;
+    }
+    else
+    {
+    return false;
+    }
+    return false;
 }

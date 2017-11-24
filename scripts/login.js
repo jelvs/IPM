@@ -9,8 +9,10 @@ function loginValidation() {
                 swal({
                     title: "Login successfully!",
                     type: 'success'
+                
                 });
                 return true;
+
             }
         }
     }
