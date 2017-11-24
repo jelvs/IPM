@@ -30,9 +30,20 @@ body {
     padding-left: 20px;
 }
 
+.party{
+  margin: 50px;
+  width: 500px;
+}
+
+.speakers{
+  margin: 50px;
+  width: 500px;
+}
+
 audio {
     margin: 0 15px 0 14px;
-    width: 500px;
+    width: 1000px;
+    background-color: black;
 }
 
 
