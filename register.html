@@ -10,14 +10,15 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		
 		<!-- SweetAlert -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.3/sweetalert2.all.min.js"></script>
 		
+		<!-- JS -->
+		<script src="scripts/register.js" type="text/javascript"></script>
+		
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="css/index.css">
-		
-		<!-- Player -->
-		<script src="scripts/register.js" type="text/javascript"></script>
 		
 		<link rel="icon" href="favicon.png">
         <title>Register</title>
@@ -49,7 +50,7 @@
 	
 				<div class="col-sm-12 col-md-6 col-lg-8" id="main">
 					<div class="row">
-						<form class="register-form" name="registerForm" onSubmit="return registerValidation();">
+						<form class="register-form" name="registerForm">
 							<div class="form-group" action="/action_page.php">
 								<input type="file" name="pic" accept="image/*">
 								<input type="submit" value="Upload Image">
@@ -68,12 +69,12 @@
 								
 								<input type="date" class="form-control" name="birthDate" placeholder="Birth Date">
 
-								<input type="button" onclick="registerValidation()" value="Create Account" style="margin-top: 40px;">													
+								<input type="button" onclick="registerValidation()" value="Create Account" style="margin-top: 40px;">
 							</div>
 						</form>
 					</div>
 					<div class="row">
-						<div class="col-sm-12 col-md-6 col-lg-6" style="padding:20px;">
+						<div class="col-sm-12 col-md-6 col-lg-6">
 							<div class="create-acc">
 							</div>
 						</div>

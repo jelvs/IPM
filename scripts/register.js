@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/*$(document).ready(function () {
     function user(pic, username, email, password, password2, birth) {
         this.pic = pic;
         this.username = username;
@@ -22,7 +22,7 @@ $(document).ready(function () {
                 alert("Account successfully created!");
             });
     });
-});
+});*/
 
 
 /*function submitRegister() {
@@ -60,11 +60,19 @@ function validateUser(username) {
     if (username === existent) {
         //alert("It seems the username is already in use :(");
         swal({
-            title: 'It seems the username is already in use :(',
+            title: "It seems the username is already in use :(",
             width: 600,
             padding: 100,
         });
         //username.focus();
+        return false;
+    }
+    if (username.length === 0) {
+        swal({
+            title: "Please insert some username..",
+            width: 600,
+            padding: 100,
+        });
         return false;
     }
     return true;
@@ -75,10 +83,18 @@ function validateEmail(email) {
     if (email.value.match(mailFormat)) {
         return true;
     }
+    else if (email.length === 0) {
+        swal({
+            title: "Please insert some email..",
+            width: 600,
+            padding: 100,
+        });
+        return false;
+    }
     else {
         //alert("It seems the email is invalid :(");
         swal({
-            title: 'It seems the email is invalid :(',
+            title: "It seems the email is invalid :(",
             width: 600,
             padding: 100,
         });
@@ -91,12 +107,22 @@ function validatePassword(password, password2) {
     if (password === password2) {
         return true;
     }
-    //alert("It seems the passwords don't match :(");
-    swal({
-        title: "It seems the passwords don't match :(",
-        width: 600,
-        padding: 100,
-    });
-    //password.focus()
-    return false;
+    else if (password.length === 0) {
+        swal({
+            title: "Please insert some password..",
+            width: 600,
+            padding: 100,
+        });
+        return false;
+    }
+    else {
+        //alert("It seems the passwords don't match :(");
+        swal({
+            title: "It seems the passwords don't match :(",
+            width: 600,
+            padding: 100,
+        });
+        //password.focus()
+        return false;
+    }
 }
