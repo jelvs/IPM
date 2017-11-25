@@ -123,8 +123,28 @@ $(document).ready(function(){
             swal({type: 'success', title: 'Speaker disconnected!'});
         }
     })
+    
+    $("#partyCheckSuggest").click(function(e){
+        $("#partyCheckSuggAuto").removeAttr("disabled");
+    });
 
-
+    $("#newParty").click(function(e){
+        var input = swal({
+            title: 'New Party',
+            input: 'text',
+            type: 'question',
+            inputPlaceholder: 'Enter the name of party',
+            showCancelButton: true,
+            html: "<h6>Options</h6><input type='checkbox' name='adm' value=''>Admin controls playlist</input><br>" +
+            "<input type='checkbox' id='partyCheckSuggest' value=''>User can suggest songs</input><br>" +
+            "<input type='checkbox' value=''>Anyone can join Party</input><br>"+
+            "<input type='checkbox' id='partyCheckSuggAuto'value=''>Suggested songs automatically queue up</input>",
+            inputValidator: function(value){
+                window.location.replace("party.html?name="+value);
+                return !value && 'You need to write the name of party!'
+            }
+        })
+    });
 
 
 });
