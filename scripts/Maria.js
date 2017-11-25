@@ -23,6 +23,8 @@ $(document).ready(function () {
         $("#playlists").html('<p>Rock <a href="#" class="notImplemented">Add To...</a></p> <p>My Fav Music <a href="#" class="notImplemented">Add To...</a></p><p>TOP <a href="#" class="notImplemented">Add To...</a></p>')
     }
     
+    function fill
+    
     function fill(){
         if (profileActive){
             fillPlaylist();
