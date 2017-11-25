@@ -17,7 +17,6 @@ body {
 }
 
 .playerbox{
-
     background-color: darkgrey;
 }
 
@@ -29,6 +28,11 @@ body {
 audio {
     margin: 0 15px 0 12px;
     background-color: black;
+}
+
+.conn-speakers{
+    height: 100px;
+    overflow: scroll;
 }
 
 
