@@ -23,11 +23,19 @@ $(document).ready(function () {
         $("#playlists").html('<p>Rock <a href="#" class="notImplemented">Add To...</a></p> <p>My Fav Music <a href="#" class="notImplemented">Add To...</a></p><p>TOP <a href="#" class="notImplemented">Add To...</a></p>')
     }
     
-    function fill
+    function fillOnline(){
+        $("#friendsList").html('<p>Pedro (Online) <i class="fa fa-circle"></i></p> <p>João (Online) <i class="fa fa-circle"></i></p><p>Rodrigo (Offline) <i class="fa fa-circle-o"></i></p><p>Carlos (Offline) <i class="fa fa-circle-o"></i></p>')
+    }
+    
+    function fillRecentActivity(){
+        $("#recentActivity").html("");
+    }
     
     function fill(){
         if (profileActive){
             fillPlaylist();
+            fillOnline();
+            fillRecentActivity();
         }
     }
     fill();

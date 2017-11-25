@@ -62,7 +62,8 @@ $(document).ready(function () {
     }
     fillTable();
 
-    $('.notImplemented').on('click', function () {
+    $('.notImplemented').on('click', function (e) {
+        e.preventDefault();
         swal(
             'Under Construction!',
             'This feature is not available yet.',
