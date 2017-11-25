@@ -22,6 +22,7 @@ $(document).ready(function () {
 
 
     function validateUser(usernameEmail) {
+        console.log(usernameEmail)
         if (usernameEmail.length == 0) {
             swal({
                 title: "Please insert some username or email...",
@@ -29,35 +30,28 @@ $(document).ready(function () {
             });
             return false;
         }
-        else if(usernameEmail != document.loginForm.usernameEmail){
+        else if(usernameEmail == "Maria" || usernameEmail =="José" || usernameEmail =="Rodrigo"){
+            return true;
+        }
+        else{
             swal({
                 title: "It seems your username isn't registed in the system :(",
                 type: 'error'
             });
             return false;
         }
-        return true;
     }
 
 
     function validatePassword(password) {
-        if (password == username.loginForm.password) {
-            return true;
-        }
-        else if (email.length == 0) {
+        if (password.length == 0) {
             swal({
-                title: "Please insert some email...",
+                title: "Please insert some password...",
                 type: 'error'
             });
             return false;
         }
-        else {
-            swal({
-                title: "It seems your password is incorrect :(",
-                type: 'error'
-            });
-            return false;
-        }
+        return true;
     }    
 
     function getNameOfUser() {
