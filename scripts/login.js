@@ -21,21 +21,15 @@ $(document).ready(function () {
     }*/
 
 
-
-
     function validateUser(usernameEmail) {
-        /*var existent;
-        if (usernameEmail === existent) {
-            return true;
-        }*/
-        if (usernameEmail.value.length === 0) {
+        if (usernameEmail.length == 0) {
             swal({
                 title: "Please insert some username or email...",
                 type: 'error'
             });
             return false;
         }
-        else if(usernameEmail != document.LoginForm.usernameEmail){
+        else if(usernameEmail != document.loginForm.usernameEmail){
             swal({
                 title: "It seems your username isn't registed in the system :(",
                 type: 'error'
@@ -47,10 +41,10 @@ $(document).ready(function () {
 
 
     function validatePassword(password) {
-        if (password === username.LoginForm.password) {
+        if (password == username.loginForm.password) {
             return true;
         }
-        else if (email.value.length === 0) {
+        else if (email.length == 0) {
             swal({
                 title: "Please insert some email...",
                 type: 'error'
@@ -64,12 +58,10 @@ $(document).ready(function () {
             });
             return false;
         }
-    }
-
-
+    }    
 
     function getNameOfUser() {
-        var name = document.LoginForm.usernameEmail;
+        var name = document.loginForm.usernameEmail;
 
         var j = "jos";
         var m = "mar";
@@ -88,19 +80,19 @@ $(document).ready(function () {
 
 
     $("#loginBtn").click(function (e) {
-      e.preventDefault();
-      var username = $("#validateUser").val();
-      var password = $("#validatePassword").val();
-      if (validateUser(usernameEmail)){
-             if(validatePassword(password)){
-                  swal({
-                      title: "Login Successfully!",
-                      type: 'success'
-                  });
-              }
-          }
-      }
-  });
+        e.preventDefault();
+        var usernameEmail = $("#validationUsernameEmail").val();
+        var password = $("#validationPassword").val();
+        if (validateUser(usernameEmail)) {
+            if (validatePassword(password)) {
+                swal({
+                    title: "Login Successfully!",
+                    type: 'success'
+                });
+                window.location.replace("dashboard.html?username="+usernameEmail);
+            }
+        }
+    });
 
 /*  if(usernameEmail === Maria){
        window.open("dashboard.html?username=Maria");
