@@ -84,11 +84,13 @@
 									<small id="requiredField" class="form-text text-muted">(*)</small>
 
 									<input type="date" class="form-control" name="birthDate" placeholder="Birth Date">
+
 									<input type="button" onclick="registerValidation()" value="Create Account" style="margin-top: 40px;">
 							</div>
 						</form>
 					-->
 						<form class="register-form" name="registerForm" id="needs-validation" novalidate>
+							
 							<div class="register-input">
 								<label class="custom-file">
 									<input type="file" id="file2" class="custom-file-input">
@@ -133,7 +135,7 @@
 								<input type="date" class="form-control" id="validationBirthDate" placeholder="Birth date">
 							</div>
 
-							<button class="btn btn-primary offset-sm-3 offset-md-3 offset-lg-3" type="submit" onclick="registerValidation()">Create Account</button>
+							<button id="createAccount" class="btn btn-primary offset-sm-3 offset-md-3 offset-lg-3" type="submit">Create Account</button>
 						</form>
 					</div>
 				</div>
