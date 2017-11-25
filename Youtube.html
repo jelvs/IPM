@@ -70,15 +70,15 @@
                 <div class="col-sm-12 col-md-3 col-lg-2 pl-4" id="left-sidebar" style="padding-left: 0px;">
                     <div class="row">
                         <div class="card">
-                            <div class="card-header h5">Linked Apps <small><a href="login.html">add...</a></small></div>
+                            <div class="card-header h5">Linked Apps</div>
                             <div class="card-body text-center">
                               <p class="card-text" id="linkedApps"><font color="red"><b>Youtube </b></font><a href="Youtube.html">Browse...</a></p>
                               <p class="card-text" id="linkedApps"><font color="red"><b>Spotify </b></font><a href="Spotify.html">Browse...</a></p>
-                                <p class="card-text notSignIn" id="linkedApps">Deezer <a href="#">Browse...</a></p>
-                                <p class="card-text notSignIn" id="linkedApps">Apple Music <a href="#">Browse...</a></p>
-                                <p class="card-text notSignIn" id="linkedApps">SoundCloud <a href="#">Browse...</a></p>
+                                <p class="card-text notSignInD" id="linkedApps">Deezer <a href="#">Browse...</a></p>
+                                <p class="card-text notSignInA" id="linkedApps">Apple Music <a href="#">Browse...</a></p>
+                                <p class="card-text notSignInS" id="linkedApps">SoundCloud <a href="#">Browse...</a></p>
                                 <br>
-                                <a href="#" type="button" class="btn btn-primary notImplemented"><i class="fa fa-plus"></i></a>
+                                <a href="login.html" type="button" class="btn btn-primary "><i class="fa fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -496,31 +496,38 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-6">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
                             <div class="row card">
                                 <div class="card-header h5">Connected Speakers</div>
-                                <div class="card-body" style="position: relative">
+                                <div class="card-body">
+                                    <div class="conn-speakers">
                                     <div id="speakers"></div>
                                     <br>
                                     <a href="#" type="button" class="btn btn-primary" id="newSpeaker"><i class="fa fa-plus"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row alert alert-dark" role="alert" id="media">
-                        <div class="col-sm-12 col-md-10 offset-md-1">
-                            <div><marquee>Now playing: <div id="nowPlaying"></div></marquee></div>
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div>
+                                <marquee>Now playing:
+                                    <div id="nowPlaying"></div>
+                                </marquee>
+                            </div>
                             <hr>
                             <!--<i class="fa fa-pause-circle-o fa-2x invisible" id="pause"></i>-->
                             <!--<i class="fa fa-play-circle-o fa-2x" id="play"></i>-->
-                            <i class="fa fa-stop-circle-o fa-2x" id="stop"></i>
-                            <i class="fa fa-backward fa-2x" id="backward"></i>
-                            <audio controls played preload="metadata" id="player">
-                                <source src="media/Californication_RHCP.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
+                            <div class="offset-sm-3 offset-md-3 offset-lg-3">
+                                <i class="fa fa-stop-circle-o fa-2x" id="stop"></i>
+                                <i class="fa fa-backward fa-2x" id="backward"></i>
+                                <audio controls played preload="metadata" id="player">
+                                    <source src="media/Californication_RHCP.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+                                </audio>
 
-                            <i class="fa fa-forward fa-2x" id="forward"></i>
+                                <i class="fa fa-forward fa-2x" id="forward"></i>
+                            </div>
                         </div>
                     </div>
                 </div>

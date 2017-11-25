@@ -56,15 +56,32 @@ $(document).ready(function(){
         )
     });
 
-    $('.notSignIn').on('click', function(){
+    $('.notSignInS').on('click', function(){
         swal(
 
-          'You have not Linked Your Account Yet!!',
-          'Go to "add..." on Linked Apps first',
+          'You have not Linked Your SoundCloud Account Yet!!',
+          'Please... Go to the "+" button first.',
           'error'
         )
     });
 
+    $('.notSignInD').on('click', function(){
+        swal(
+
+          'You have not Linked Your Deezer Account Yet!!',
+          'Please... Go to the "+" button first.',
+          'error'
+        )
+    });
+
+    $('.notSignInA').on('click', function(){
+        swal(
+
+          'You have not Linked Your Apple Music Account Yet!!',
+          'Please... Go to the "+" button first.',
+          'error'
+        )
+    });
 
 
 
