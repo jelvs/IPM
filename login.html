@@ -26,76 +26,116 @@
         <link rel="icon" href="favicon.png">
         <title>Login</title>
     </head>
-
+    
     <body>
-
         <div class="header">
             <div class="row">
                 <div class="col-sm-12 col-md-3 col-lg-2">
-                    <a href="index.html"><img src="logo.png" class="mainLogo" alt="MainLogo"></a>
+                    <a href="index.html">
+                        <img src="logo.png" class="mainLogo" alt="MainLogo">
+                    </a>
                 </div>
-
+        
                 <div class="col-sm-12 col-md-6 col-lg-8">
                 </div>
-
+        
                 <div class="col-sm-12 col-md-3 col-lg-2">
                     <ul>
-                        <li><a href="register.html"> Register </a></li>
-                        <li><a class="active" href="login.html"> Login </a></li>
+                        <li>
+                            <a href="register.html"> Register </a>
+                        </li>
+                        <li>
+                            <a class="active" href="login.html"> Login </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
-
-        <div class="container-fluid" style="padding-top: 40px;">
+        
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 col-md-3 col-lg-2" id="left-sidebar">
                 </div>
-
-                <div class="col-sm-12 col-md-6 col-lg-8" id="main">
+                <div class="col-sm-12 col-md-6 col-lg-8 offset-sm-2 offset-md-2 offset-lg-2" id="main">
                     <div class="row">
-                        <form class="login-form" name="loginForm">
-                            <div class="form-group">
-                                <label for="externalLogin">Login through app:</label>
-                                <select class="form-control" id="musicApps">
-                                    <option>Youtube</option>
-                                    <option>Spotify</option>
-                                    <option>SoundCloud</option>
-                                    <option>AppleMusic</option>
-                                    <option>Deezer</option>
-                                    <option>Shazam</option>
-                                </select>
-                
-                                <input type="text" class="form-control" id="usernameEmail" placeholder="Username or Email">
-                                <small id="requiredField" class="form-text text-muted">(*)</small>
-                
-                                <input type="password" class="form-control" id="password" placeholder="Password">
-                                <small id="requiredField" class="form-text text-muted">(*)</small>
-
-                                <input type="button" onclick="loginValidation()" value="Login" style="margin-top: 40px;">
+                        <!--
+                                    <form class="login-form" name="loginForm">
+                                        <div class="form-group">
+                                            <label for="externalLogin">Login through app:</label>
+                                            <select class="form-control" id="musicApps">
+                                                <option>Youtube</option>
+                                                <option>Spotify</option>
+                                                <option>SoundCloud</option>
+                                                <option>AppleMusic</option>
+                                                <option>Deezer</option>
+                                                <option>Shazam</option>
+                                            </select>
+                            
+                                            <input type="text" class="form-control" id="usernameEmail" placeholder="Username or Email">
+                                            <small id="requiredField" class="form-text text-muted">(*)</small>
+                            
+                                            <input type="password" class="form-control" id="password" placeholder="Password">
+                                            <small id="requiredField" class="form-text text-muted">(*)</small>
+            
+                                            <input type="button" onclick="loginValidation()" value="Login" style="margin-top: 40px;">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 col-lg-6" style="padding:20px;">
+                                        <div class="login-acc">
+                                        </div>
+                                        <div class="dash">
+                                            <input type="button" value="Access Dashboard" class="button_active" onclick="location.href='dashboard.html';" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <div class="required-field">
+                                            (*) Field Required
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        -->
+               
+                        <form class="login-form" name="loginForm" id="needs-validation" novalidate>
+                            <div class="register-input">
+                                <label for="externalLogin">Login through app:</label>
+                                <select class="custom-select">
+                                    <option selected>Youtube</option>
+                                    <option value="1">Spotify</option>
+                                    <option value="2">SoundCloud</option>
+                                    <option value="3">AppleMusic</option>
+                                    <option value="4">Deezer</option>
+                                    <option value="5">Shazam</option>
+                                </select>
+                            </div>
+        
+                            <div class="register-input">
+                                <label for="validationUsernameEmail">Username or email</label>
+                                <input type="text" class="form-control" id="validationUsernameEmail" placeholder="Username or email" required>
+                                <div class="invalid-feedback">
+                                    Field required.
+                                </div>
+                            </div>
+        
+                            <div class="register-input">
+                                <label for="validationPassword">Password</label>
+                                <input type="password" class="form-control" id="validationPassword" placeholder="Password" required>
+                                <div class="invalid-feedback">
+                                    Field required.
+                                </div>
+                            </div>
+        
+                            <!--<button class="btn btn-primary offset-sm-3 offset-md-3 offset-lg-3" type="submit" onclick="window.location.href='dashboard.html'">Login</button>-->
+                            <button class="btn btn-primary offset-sm-3 offset-md-3 offset-lg-3" type="submit">Login</button>
                         </form>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-6" style="padding:20px;">
-                            <div class="login-acc">
-                            </div>
-                            <div class="dash">
-                                <input type="button" value="Access Dashboard" class="button_active" onclick="location.href='dashboard.html';" />
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <div class="required-field">
-                                (*) Field Required
-                            </div>
-                        </div>
+        
+                    <div class="col-sm-12 col-md-3 col-lg-2" id="right">
                     </div>
+        
                 </div>
-
-                <div class="col-sm-12 col-md-3 col-lg-2" id="right">
-                </div>
-
             </div>
-        </div>
     </body>
 </html>

@@ -26,20 +26,20 @@ function registerValidation() {
 
 function validateUser(username) {
     var existent;
-    if (username === existent) {
+    if (username.value.length === 0) {
+        swal({
+            title: "Please insert some username...",
+            type: 'error'
+        });
+        return false;
+    }
+    if (username.value === existent) {
         //alert("It seems the username is already in use :(");
         swal({
             title: "It seems the username is already in use :(",
             type: 'error'
         });
         //username.focus();
-        return false;
-    }
-    if (username.value.length === 0) {
-        swal({
-            title: "Please insert some username...",
-            type: 'error'
-        });
         return false;
     }
     return true;
@@ -109,10 +109,29 @@ function show_confirm()
   })
 }
 //botao upload
-window.onload=function(){
+/*window.onload=function(){
   document.getElementById("submit").style.display='none';
-}
+}*/
 //botao upload
 function showButton(){
   document.getElementById("submit").style.display="block";
 }
+
+
+
+
+
+(function () {
+    'use strict';
+
+    window.addEventListener('load', function () {
+        var form = document.getElementById('needs-validation');
+        form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    }, false);
+})();
