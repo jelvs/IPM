@@ -97,6 +97,42 @@ $(document).ready(function () {
         )
     });
 
+    $('.addedMP').on('click', function(){
+        swal(
+
+          'Music was added!!',
+          'Music was added to the Specific Party.',
+          'success'
+        )
+    });
+
+    $('.addedM').on('click', function(){
+        swal(
+
+          'Music was added!!',
+          'Music was added to the Specific Local Playlist.',
+          'success'
+        )
+    });
+
+    $('.addedL').on('click', function(){
+        swal(
+
+          'Playlist was added!!',
+          'Playlist was added to the Specific Local Playlist.',
+          'success'
+        )
+    });
+
+    $('.addedP').on('click', function(){
+        swal(
+
+          'Playlist was added!!',
+          'Playlist was added to the Specific Party.',
+          'success'
+        )
+    });
+
 
 
     //SPEAKERS
@@ -138,7 +174,7 @@ $(document).ready(function () {
         }
     })
 
-    $("#partyCheckSuggest").click(function (e) {
+    $("#partyCheckSuggest").click(function(e){
         $("#partyCheckSuggAuto").removeAttr("disabled");
     });
 
