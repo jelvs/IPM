@@ -1,5 +1,6 @@
-function registerValidation() {
-    {
+$(document).ready(function () {
+
+    /*function registerValidation() {
         var username = document.registerForm.username;
         var email = document.registerForm.email;
         var password = document.registerForm.password;
@@ -9,129 +10,140 @@ function registerValidation() {
             if (validateEmail(email)) {
                 if (validatePassword(password, password2)) {
 
-                      //alert('Form Succesfully Submitted');
-                      swal({
-                          title: "Account created successfully!",
-                          type: 'success'
+                    //alert('Form Succesfully Submitted');
+                    swal({
+                        title: "Account created successfully!",
+                        type: 'success'
 
-                        });
-                        return true;
+                    });
+                    return true;
 
                 }
             }
         }
-    }
-}
+    }*/
+
+    $("#createAccount").click(function (e) {
+        //window.alert("create account button begin");
+        var username = document.registerForm.username;
+        var email = document.registerForm.email;
+        var password = document.registerForm.password;
+        var password2 = document.registerForm.password2;
+                    swal({
+                        title: "Account created successfully!",
+                        type: 'success'
+                    });
+                    //window.alert("create account button end");       
+    });
 
 
-function validateUser(username) {
-    var existent;
-    if (username.value.length === 0) {
-        swal({
-            title: "Please insert some username...",
-            type: 'error'
-        });
-        return false;
-    }
-    if (username.value === existent) {
-        //alert("It seems the username is already in use :(");
-        swal({
-            title: "It seems the username is already in use :(",
-            type: 'error'
-        });
-        //username.focus();
-        return false;
-    }
-    return true;
-}
+    function validateUser(username) {
+        //var existent;
 
-
-function validateEmail(email) {
-    var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (email.value.match(mailFormat)) {
+        if (username.value.length == 0) {
+            swal({
+                title: "Please insert some username...",
+                type: 'error'
+            });
+            return false;
+        }
+        /*if (username.value == existent) {
+            //alert("It seems the username is already in use :(");
+            swal({
+                title: 'It seems the username is already in use :(',
+                type: 'error'
+            });
+            //username.focus();
+            return false;
+        }*/
         return true;
     }
-    else if (email.value.length === 0) {
-        swal({
-            title: "Please insert some email...",
-            type: 'error'
-        });
-        return false;
+
+
+    function validateEmail(email) {
+        var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (email.value.match(mailFormat)) {
+            return true;
+        }
+        else if (email.value.length == 0) {
+            swal({
+                title: "Please insert some email...",
+                type: 'error'
+            });
+            return false;
+        }
+        else {
+            swal({
+                title: "It seems the email is invalid :(",
+                type: 'error'
+            });
+            return false;
+        }
     }
-    else {
-        //alert("It seems the email is invalid :(");
-        swal({
-            title: "It seems the email is invalid :(",
-            type: 'error'
-        });
-        //email.focus();
-        return false;
-    }
-}
 
-function validatePassword(password, password2) {
-    if (password.value === password2.value) {
-      if (password.value.length <= 6 && password2.value.length <=6) {
-          swal({
-              title: "Your password isn't Strong enough!!!!  Help us keep it safe Use at least 6 Characters.",
-              type: 'error'
-          });
-          return false;
-      }
-      return true;
-    }
-    else if (password.value.length === 0) {
-        swal({
-            title: "Please insert some password...",
-            type: 'error'
-        });
-        return false;
-    }
-    else {
-        //alert("It seems the passwords don't match :(");
-        swal({
-            title: "It seems the passwords don't match :(",
-            type: 'error'
-        });
-        //password.focus()
-        return false;
-    }
-}
-
-function show_confirm()
-{
-  swal({
-  position: 'middle',
-  type: 'success',
-  title: 'Your Photo has been Saved! it will be used as your Profile Picture by Default.',
-  showConfirmButton: true,
-
-  })
-}
-//botao upload
-/*window.onload=function(){
-  document.getElementById("submit").style.display='none';
-}*/
-//botao upload
-function showButton(){
-  document.getElementById("submit").style.display="block";
-}
-
-
-
-
-
-(function () {
-    'use strict';
-
-    window.addEventListener('load', function () {
-        var form = document.getElementById('needs-validation');
-        form.addEventListener('submit', function (event) {
-            if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
+    function validatePassword(password, password2) {
+        if (password.value.length == 0) {
+            swal({
+                title: "Please insert some password...",
+                type: 'error'
+            });
+            return false;
+        }
+        else if (password.value == password2.value) {
+            if (password.value.length < 6 && password2.value.length < 6) {
+                swal({
+                    title: "Your password isn't strong enough!!!  Help us keep it safe and use at least 6 Characters.",
+                    type: 'error'
+                });
+                return false;
             }
-            form.classList.add('was-validated');
+            return true;
+        }
+        else {
+            swal({
+                title: "It seems the passwords don't match :(",
+                type: 'error'
+            });
+
+            return false;
+        }
+    }
+
+    /*function show_confirm() {
+        swal({
+            position: 'middle',
+            type: 'success',
+            title: 'Your Photo has been Saved! it will be used as your Profile Picture by Default.',
+            showConfirmButton: true,
+
+        })
+    }*/
+    //botao upload
+    /*window.onload=function(){
+      document.getElementById("submit").style.display='none';
+    }*/
+    //botao upload
+    /*function showButton() {
+        document.getElementById("submit").style.display = "block";
+    }*/
+
+
+
+
+
+    (function () {
+        'use strict';
+
+        window.addEventListener('load', function () {
+            var form = document.getElementById('needs-validation');
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
         }, false);
-    }, false);
-})();
+    })();
+
+});
