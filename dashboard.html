@@ -167,7 +167,7 @@
                     <div class="row alert alert-dark" role="alert" id="media">
                         <div class="col-sm-12 col-md-12 col-lg-12">
                             <div>
-                                <marquee>Now playing:
+                                <marquee><font color="red"><b> Up Next: </b></font>  Back In Black (<font color="blue">By: </font> AC/DC)
                                     <div id="nowPlaying"></div>
                                 </marquee>
                             </div>
@@ -175,13 +175,18 @@
                             <!--<i class="fa fa-pause-circle-o fa-2x invisible" id="pause"></i>-->
                             <!--<i class="fa fa-play-circle-o fa-2x" id="play"></i>-->
                             <div class="offset-sm-3 offset-md-3 offset-lg-3">
+                                <a><font color="red"><b> Current Song: </font> </b> Californication (<font color="blue">By: </font> Red Hot Chilli Peppers)</a>
                                 <i class="fa fa-stop-circle-o fa-2x" id="stop"></i>
                                 <i class="fa fa-backward fa-2x" id="backward"></i>
+                                <i class="fa fa-repeat" id="repeat"></i>
                                 <audio controls played preload="metadata" id="player">
                                     <source src="media/Californication_RHCP.mp3" type="audio/mpeg"> Your browser does not support the audio element.
                                 </audio>
+                                <i class="fa fa-random" id="random"></i>
+                                <i class="fa fa-forward fa-2x" id="forward">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                                <a> &nbsp;&nbsp;&nbsp;&nbsp;<font color="red"><b> Current Party: </font> </b> Home Study </a>
 
-                                <i class="fa fa-forward fa-2x" id="forward"></i>
+
                             </div>
                         </div>
                     </div>
