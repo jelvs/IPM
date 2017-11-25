@@ -4,38 +4,24 @@ $(document).ready(function () {
         {
             var usernameEmail = document.loginForm.usernameEmail;
             var password = document.loginForm.password;
-    
+
             if (validateUser(usernameEmail)) {
                 if (validatePassword(password)) {
                     //alert('Form Succesfully Submitted');
                     swal({
                         title: "Login successfully!",
                         type: 'success'
-                    
+
                     });
                     return true;
-    
+
                 }
             }
         }
     }*/
 
-    $("#loginBtn").click(function (e) {
-        var usernameEmail = document.loginForm.usernameEmail;
-        var password = document.loginForm.password;
 
-        if (validateUser(usernameEmail)) {
-            if (validatePassword(password)) {
-                swal({
-                    title: "Login successfully!",
-                    type: 'success'
 
-                });
-                return true;
-
-            }
-        }
-    });
 
     function validateUser(usernameEmail) {
         /*var existent;
@@ -49,18 +35,19 @@ $(document).ready(function () {
             });
             return false;
         }
-        else {
+        else if(usernameEmail != document.LoginForm.usernameEmail){
             swal({
                 title: "It seems your username isn't registed in the system :(",
                 type: 'error'
             });
             return false;
         }
+        return true;
     }
 
 
     function validatePassword(password) {
-        if (password === username.getPassword()) {
+        if (password === username.LoginForm.password) {
             return true;
         }
         else if (email.value.length === 0) {
@@ -82,7 +69,7 @@ $(document).ready(function () {
 
 
     function getNameOfUser() {
-        var name = document.loginForm.usernameEmail;
+        var name = document.LoginForm.usernameEmail;
 
         var j = "jos";
         var m = "mar";
@@ -100,22 +87,45 @@ $(document).ready(function () {
     }
 
 
+    $("#loginBtn").click(function (e) {
+      e.preventDefault();
+      var username = $("#validateUser").val();
+      var password = $("#validatePassword").val();
+      if (validateUser(usernameEmail)){
+             if(validatePassword(password)){
+                  swal({
+                      title: "Login Successfully!",
+                      type: 'success'
+                  });
+              }
+          }
+      }
+  });
 
+/*  if(usernameEmail === Maria){
+       window.open("dashboard.html?username=Maria");
+  }
+ else if(usernameEmail === Jose){
+      window.open("dashboard.html?username=Jose");
+  }
+  else if(usernameEmail === Rodrigo){
+      window.open("dashboard.html?username=Rodrigo");
+  }
+*/
 
+    function validate() {
+      'use strict';
 
-    (function () {
-        'use strict';
-
-        window.addEventListener('load', function () {
-            var form = document.getElementById('needs-validation');
-            form.addEventListener('submit', function (event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
+      window.addEventListener('load', function() {
+        var form = document.getElementById('needs-validation');
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
         }, false);
-    })();
+      }, false);
+    };
 
 });
