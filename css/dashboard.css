@@ -17,17 +17,17 @@ body {
 }
 
 .playerbox{
-    /*width: 1250px;*/
+
     background-color: darkgrey;
 }
 
 .list-group {
-    padding-bottom: 30px; 
+    padding-bottom: 30px;
     padding-left: 20px;
 }
 
 audio {
-    margin: 0 15px 0 14px;
+    margin: 0 15px 0 12px;
     background-color: black;
 }
 
