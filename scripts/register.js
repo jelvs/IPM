@@ -5,42 +5,24 @@ $(document).ready(function () {
         var email = document.registerForm.email;
         var password = document.registerForm.password;
         var password2 = document.registerForm.password2;
-
         if (validateUser(username)) {
             if (validateEmail(email)) {
                 if (validatePassword(password, password2)) {
-
                     //alert('Form Succesfully Submitted');
                     swal({
                         title: "Account created successfully!",
                         type: 'success'
-
                     });
                     return true;
-
                 }
             }
         }
     }*/
-
-    $("#createAccount").click(function (e) {
-        //window.alert("create account button begin");
-        var username = document.registerForm.username;
-        var email = document.registerForm.email;
-        var password = document.registerForm.password;
-        var password2 = document.registerForm.password2;
-                    swal({
-                        title: "Account created successfully!",
-                        type: 'success'
-                    });
-                    //window.alert("create account button end");       
-    });
-
-
+    
     function validateUser(username) {
         //var existent;
 
-        if (username.value.length == 0) {
+        if (username.length == 0) {
             swal({
                 title: "Please insert some username...",
                 type: 'error'
@@ -62,10 +44,10 @@ $(document).ready(function () {
 
     function validateEmail(email) {
         var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        if (email.value.match(mailFormat)) {
+        if (email.match(mailFormat)) {
             return true;
         }
-        else if (email.value.length == 0) {
+        else if (email.length == 0) {
             swal({
                 title: "Please insert some email...",
                 type: 'error'
@@ -82,15 +64,15 @@ $(document).ready(function () {
     }
 
     function validatePassword(password, password2) {
-        if (password.value.length == 0) {
+        if (password.length == 0) {
             swal({
                 title: "Please insert some password...",
                 type: 'error'
             });
             return false;
         }
-        else if (password.value == password2.value) {
-            if (password.value.length < 6 && password2.value.length < 6) {
+        else if (password == password2) {
+            if (password.length < 6 && password2.length < 6) {
                 swal({
                     title: "Your password isn't strong enough!!!  Help us keep it safe and use at least 6 Characters.",
                     type: 'error'
@@ -109,13 +91,34 @@ $(document).ready(function () {
         }
     }
 
+
+    $("#createAccount").click(function (e) {
+        e.preventDefault();
+        var username = $("#validationUsername").val();
+        var email = $("#validationEmail").val();
+        var password = $("#validationPassword").val();
+        var password2 = $("#validationPassword2").val();
+        if (validateUser(username)){
+            if(validateEmail(email)){
+               if(validatePassword(password,password2)){
+                    swal({
+                        title: "Account created successfully!",
+                        type: 'success'
+                    });
+                }
+            }
+        }
+    });
+    
+    
+    
+    
     /*function show_confirm() {
         swal({
             position: 'middle',
             type: 'success',
             title: 'Your Photo has been Saved! it will be used as your Profile Picture by Default.',
             showConfirmButton: true,
-
         })
     }*/
     //botao upload
@@ -130,20 +133,19 @@ $(document).ready(function () {
 
 
 
+    function validate() {
+      'use strict';
 
-    (function () {
-        'use strict';
-
-        window.addEventListener('load', function () {
-            var form = document.getElementById('needs-validation');
-            form.addEventListener('submit', function (event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
+      window.addEventListener('load', function() {
+        var form = document.getElementById('needs-validation');
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
         }, false);
-    })();
+      }, false);
+    };
 
 });
