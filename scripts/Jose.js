@@ -29,4 +29,45 @@ $(document).ready(function () {
         }
     }
     fill();
+
+
+
+    function addPlaylist(name) {
+        var oldContent = $("#playlists").get(0).outerHTML;
+        var newContent = oldContent + '<div class="form-check"><label class="form-check-label">' +
+            '<input class="form-check-input playlistCheckbox" type="checkbox" value="" playlistCheckbox>' + name + '</label></div>';
+        $("#playlists").html(newContent);
+    }
+    $("#newPlaylist").click(function (e) {
+        e.preventDefault();
+        var name = swal({
+            title: 'New Playlist',
+            input: 'text',
+            inputPlaceholder: 'Enter the name of the playlist',
+            showCancelButton: true,
+            inputValidator: function (value) {
+                if (value != null && value != "")
+                    addPlaylist(value);
+                return !value && 'You need to write something!'
+            }
+        })
+        if (name) {
+            swal({ type: 'success', title: 'Playlist added successfully!' });
+        }
+    });
+
+    $("[playlistCheckbox]").click(function (e) {
+        //TODO Não funciona
+        e.preventDefault();
+        console.log($(this));
+        if ($(this).val() == 1) {
+            swal({ type: 'success', title: 'Playlist added!' });
+        }
+        else {
+            swal({ type: 'success', title: 'Playlist removed!' });
+        }
+    })
+
+
+
 });
