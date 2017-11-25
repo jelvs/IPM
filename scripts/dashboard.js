@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover();
     var user = "";
-    
+
     function song(name, artist, album, duration, dateAdded, file) {
         this.name = name;
         this.artist = artist;
@@ -10,11 +10,11 @@ $(document).ready(function(){
         this.dateAdded = dateAdded;
         this.file = file;
     }
-    
+
     var currentPlayingID = 0;
     var localArtists = 0;
     var localAlbums = 0;
-    
+
     function getRow4Table(data){
         var btn = "<button class='btn btn-link btn-sm material_btn material_btn-link notImplemented' id="+data.name+ " style='padding:7px;'><i class='fa fa-fw fa-lg fa-bars text-info'</i></button>";
         $row = $('<tr><td id="btn_'+data.name+'">'+btn+'</td><td>'+
@@ -24,11 +24,16 @@ $(document).ready(function(){
                  '</td><td>'+ moment(data.dateAdded).format("DD/MM/YYYY")+'</td></tr>');
         return $row;
     }
-    
+
     var sources = [];
     sources.push(new song("Californication", "Red Hot Chilli Peppers", "Californication", "5:20", new Date(2017,5,24), "Californication_RHCP.mp3"));
-    sources.push(new song("Back in Black", "AC/DC", null, "4:15", new Date(2017,1,10), "BackInBlack_ACDC.mp3"));
-    
+    sources.push(new song("Back in Black", "AC/DC", "Back in Black", "4:15", new Date(2017,1,10), "BackInBlack_ACDC.mp3"));
+    sources.push(new song("B.Y.O.B", "System Of a Down", "Mezmerize", "4:15", new Date(2017,10,10), "B_Y_O_B_SYSTEMOFADOWN.mp3"));
+    sources.push(new song("In the End", "Linkin Park", "Hybrid Theory", "3:37", new Date(2017,10,11), "InTheEnd_LINKINPARK.mp3"));
+    sources.push(new song("Hey you", "Pink Floyd", "The Wall (Remastered)", "4:38", new Date(2017,10,11), "HeyYou_PINKFLOYD.mp3"));
+
+
+
     function fillTable(){
         for (i in sources){
             $('#TablePlaylistSongs').append(getRow4Table(sources[i]));
@@ -42,7 +47,7 @@ $(document).ready(function(){
         $("#localAlbums").html("<b>Albums:</b> " + localAlbums);
     }
     fillTable();
-    
+
     $('.notImplemented').on('click', function(){
         swal(
           'Under Construction!',
@@ -50,14 +55,14 @@ $(document).ready(function(){
           'warning'
         )
     });
-    
-    
-    
+
+
+
     //SPEAKERS
-    
+
     function addSpeaker(name){
         var oldContent = $("#speakers").get(0).outerHTML;
-        var newContent = oldContent + '<div class="form-check"><label class="form-check-label">' + 
+        var newContent = oldContent + '<div class="form-check"><label class="form-check-label">' +
         '<input class="form-check-input speakerCheckbox" type="checkbox" value="" speakerCheckbox>'+ name +'</label></div>';
         $("#speakers").html(newContent);
     }
@@ -79,7 +84,7 @@ $(document).ready(function(){
             swal({type: 'success', title: 'Speaker added successfully!'});
         }
     });
-    
+
     $("[speakerCheckbox]").click(function(e){
         //TODO Não funciona
         e.preventDefault();
@@ -91,8 +96,8 @@ $(document).ready(function(){
             swal({type: 'success', title: 'Speaker disconnected!'});
         }
     })
-    
-    
-    
+
+
+
 
 });
