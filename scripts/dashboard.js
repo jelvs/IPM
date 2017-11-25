@@ -113,6 +113,7 @@ $(document).ready(function () {
           'Music was added!!',
           'Music was added to the Specific Local Playlist.',
           'success'
+          
         )
     });
 
@@ -131,7 +132,7 @@ $(document).ready(function () {
           'Playlist was added!!',
           'Playlist was added to the Specific Party.',
           'success'
-          
+
         )
     });
 
