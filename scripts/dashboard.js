@@ -130,6 +130,7 @@ $(document).ready(function () {
           'Playlist was added!!',
           'Playlist was added to the Specific Party.',
           'success'
+          
         )
     });
 
