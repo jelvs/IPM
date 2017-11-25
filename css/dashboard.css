@@ -21,28 +21,13 @@ body {
     background-color: darkgrey;
 }
 
-.media{
-    margin: 50px;
-}
-
 .list-group {
     padding-bottom: 30px; 
     padding-left: 20px;
 }
 
-.party{
-  margin: 50px;
-  width: 500px;
-}
-
-.speakers{
-  margin: 50px;
-  width: 500px;
-}
-
 audio {
     margin: 0 15px 0 14px;
-    width: 1000px;
     background-color: black;
 }
 
