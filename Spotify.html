@@ -512,7 +512,7 @@
                     <div class="row alert alert-dark" role="alert" id="media">
                         <div class="col-sm-12 col-md-12 col-lg-12">
                             <div>
-                                <marquee>Now playing:
+                                <marquee><font color="red"><b> Up Next: </b></font>  Back In Black (<font color="blue">By: </font> AC/DC)
                                     <div id="nowPlaying"></div>
                                 </marquee>
                             </div>
@@ -569,8 +569,24 @@
                         <div class="card">
                             <div class="card-header h5"> Share</div>
                             <div class="card-body">
-                                <a href="#" type="button" class="btn btn-primary notImplemented"><i class="fa fa-music"> Music</i></a>
-                                <a href="#" type="button" class="btn btn-primary notImplemented"><i class="fa fa-list-ol"> Playlist</i></a>
+                              <button type="button" class="btn btn-primary"><i class="fa fa-music" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Music</i>
+                                  <div class="dropdown-menu" aria-labelledby="btnProfileDrop">
+                                    <a class="dropdown-item notImplemented" href="#"><b>Share To :</b></a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item notImplemented" href="#">Facebook <img src="fb.png" style="width:40px;height:40px;"></a>
+                                      <a class="dropdown-item notImplemented" href="#">Instagram <img src="IG.png" style="width:40px;height:40px;"></a>
+                                      <a class="dropdown-item notImplemented" href="#">Twitter <img src="tw.png" style="width:40px;height:40px;"></a>
+                                  </div>
+                              </button>
+                              <button type="button" class="btn btn-primary "><i class="fa fa-list-ol" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Playlist</i>
+                                <div class="dropdown-menu" aria-labelledby="btnProfileDrop">
+                                  <a class="dropdown-item notImplemented" href="#"><b>Share To :</b></a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item notImplemented" href="#">Facebook <img src="fb.png" style="width:40px;height:40px;"></a>
+                                    <a class="dropdown-item notImplemented" href="#">Instagram <img src="IG.png" style="width:40px;height:40px;"></a>
+                                    <a class="dropdown-item notImplemented" href="#">Twitter <img src="tw.png" style="width:40px;height:40px;"></a>
+                                </div>
+                              </button>
                             </div>
                         </div>
                    </div>
