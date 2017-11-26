@@ -14,9 +14,14 @@ $(document).ready(function () {
         }
     };
     var user = getUrlParameter('username');
+    var party = getUrlParameter('name');
     var profileActive = false;
     if (user == "Maria"){
         profileActive = true;
+    }
+    var isParty = false;
+    if (party.length >0){
+        isParty=true;
     }
     
     function fillPlaylist(){
@@ -27,6 +32,20 @@ $(document).ready(function () {
         $("#friendsList").html('<p>Pedro (Online) <i class="fa fa-circle"></i></p> <p>João (Online) <i class="fa fa-circle"></i></p><p>Rodrigo (Offline) <i class="fa fa-circle-o"></i></p><p>Carlos (Offline) <i class="fa fa-circle-o"></i></p>')
     }
     
+    function addSpeaker(name) {
+        var oldContent = $("#speakers").get(0).outerHTML;
+        var newContent = oldContent + '<div class="form-check"><label class="form-check-label">' +
+            '<input class="form-check-input speakerCheckbox" type="checkbox" value="" speakerCheckbox>' + name + '</label></div>';
+        $("#speakers").html(newContent);
+    }
+    
+    function fillSpeakers(){
+        addSpeaker("Bedroom");
+        addSpeaker("Living Room");
+        addSpeaker("Kitchen");
+        addSpeaker("Bathroom");
+    }
+    
     function fillRecentActivity(){
         $("#recentActivity").html("");
     }
@@ -34,8 +53,14 @@ $(document).ready(function () {
     function fill(){
         if (profileActive){
             fillPlaylist();
-            fillOnline();
             fillRecentActivity();
+            if (isParty){
+                fillSpeakers();
+                $("#friendsList").html('');
+            }
+            else{
+                fillOnline();
+            }
         }
     }
     fill();

@@ -139,33 +139,13 @@ $(document).ready(function () {
 
 
     //SPEAKERS
-
-    function addSpeaker(name) {
-        var oldContent = $("#speakers").get(0).outerHTML;
-        var newContent = oldContent + '<div class="form-check"><label class="form-check-label">' +
-            '<input class="form-check-input speakerCheckbox" type="checkbox" value="" speakerCheckbox>' + name + '</label></div>';
-        $("#speakers").html(newContent);
-    }
-    $("#newSpeaker").click(function (e) {
+    
+        $("#saveSpeaker").click(function (e) {
         e.preventDefault();
-        var name = swal({
-            title: 'New Speaker',
-            input: 'text',
-            inputPlaceholder: 'Enter the name of the speaker',
-            showCancelButton: true,
-            inputValidator: function (value) {
-                if (value != null && value != "")
-                    addSpeaker(value);
-                return !value && 'You need to write something!'
-            }
-        })
-        //TODO NAO FUNCIONA
-        if (name) {
-            swal({ type: 'success', title: 'Speaker added successfully!' });
-        }
-    });
-
-    $("[speakerCheckbox]").click(function (e) {
+        swal({ type: 'success', title: 'Speaker connected!' });
+    })
+    
+    $("#speakerCheckbox").click(function (e) {
         //TODO Não funciona
         e.preventDefault();
         console.log($(this));
@@ -177,11 +157,40 @@ $(document).ready(function () {
         }
     })
 
+    function addSpeaker(name) {
+        var oldContent = $("#speakers").get(0).outerHTML;
+        var newContent = oldContent + '<div class="form-check speakerCheckbox"><label class="form-check-label speakerCheckbox">' +
+            '<input class="form-check-input speakerCheckbox" type="checkbox" value="">' + name + '</label></div>';
+        $("#speakers").html(newContent);
+        return true;
+    }
+    $("#newSpeaker").click(function (e) {
+        e.preventDefault();
+        var added = false;
+        var name = swal({
+            title: 'New Speaker',
+            input: 'text',
+            inputPlaceholder: 'Enter the name of the speaker',
+            showCancelButton: true,
+            inputValidator: function (value) {
+                if (value != null && value != ""){
+                    added = addSpeaker(value);
+                }
+                return !value && 'You need to write something!'
+            }
+        }).then((result) => {
+            if (result.value) {
+                swal({ type: 'success', title: 'Speaker added successfully!' });
+              }
+            });  
+    });
+
     $("#partyCheckSuggest").click(function(e){
         $("#partyCheckSuggAuto").removeAttr("disabled");
     });
 
     $("#newParty").click(function (e) {
+        e.preventDefault();
         var input = swal({
             title: 'New Party',
             input: 'text',
@@ -199,5 +208,17 @@ $(document).ready(function () {
         })
     });
 
+    
+    $("#partyList").change(function(e){
+        var str ="";
+        $( "select option:selected" ).each(function() {
+            str = $( this ).text() + " ";
+        });
+        window.location.href("party.html?name=" + str +"&username="+user);
+    })
+    
+    $("#homeButton").click(function(e){
+        window.location.href("dashboard.html?username=" + user);
+    })
 
 });

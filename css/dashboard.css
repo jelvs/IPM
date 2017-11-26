@@ -37,6 +37,11 @@ audio {
     overflow: scroll;
 }
 
+.recentActivity{
+    height: 300px;
+    overflow: scroll;
+}
+
 
 .plyr--audio .plyr__controls button.tab-focus:focus,
 .plyr--audio .plyr__controls button:hover,

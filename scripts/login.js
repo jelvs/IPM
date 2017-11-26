@@ -89,7 +89,7 @@ $(document).ready(function () {
                     title: "Login Successfully!",
                     type: 'success'
                 });
-                setTimeout(function(){ window.location.replace("dashboard.html?username="+usernameEmail); }, 3000);
+                setTimeout(function(){ window.location.replace("dashboard.html?username="+usernameEmail); }, 2000);
             }
         }
     });
