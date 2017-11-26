@@ -193,7 +193,7 @@ $(document).ready(function () {
                 "<input type='checkbox' value=''>Anyone can join Party</input><br>" +
                 "<input type='checkbox' id='partyCheckSuggAuto'value=''>Suggested songs automatically queue up</input>",
             inputValidator: function (value) {
-                window.location.replace("party.html?name=" + value);
+                window.location.replace("party.html?name=" + value+"&username="+user);
                 return !value && 'You need to write the name of party!'
             }
         })

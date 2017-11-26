@@ -22,7 +22,6 @@ $(document).ready(function () {
 
 
     function validateUser(usernameEmail) {
-        console.log(usernameEmail)
         if (usernameEmail.length == 0) {
             swal({
                 title: "Please insert some username or email...",
@@ -47,6 +46,13 @@ $(document).ready(function () {
         if (password.length == 0) {
             swal({
                 title: "Please insert some password...",
+                type: 'error'
+            });
+            return false;
+        }
+        else if(password != "123456"){
+            swal({
+                title: "The password inserted is incorrect...",
                 type: 'error'
             });
             return false;
@@ -83,7 +89,7 @@ $(document).ready(function () {
                     title: "Login Successfully!",
                     type: 'success'
                 });
-                window.location.replace("dashboard.html?username="+usernameEmail);
+                setTimeout(function(){ window.location.replace("dashboard.html?username="+usernameEmail); }, 3000);
             }
         }
     });
