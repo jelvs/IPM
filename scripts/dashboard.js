@@ -113,7 +113,7 @@ $(document).ready(function () {
           'Music was added!!',
           'Music was added to the Specific Local Playlist.',
           'success'
-          
+
         )
     });
 
@@ -136,15 +136,36 @@ $(document).ready(function () {
         )
     });
 
+    $("#reportI").click(function(e){
+      e.preventDefault();
+      var added = false;
+      var name = swal({
+          title: 'So it appears you came across an issue!',
+          input: 'text',
+          inputPlaceholder: 'Specify the issue you are having...',
+          showCancelButton: true,
+          inputValidator: function (value) {
+              if (value != null && value != ""){
+
+              }
+              return !value && 'You need to write something!'
+          }
+      }).then((result) => {
+          if (result.value) {
+              swal({ type: 'success', title: 'Your Report has been sent, Thank you for your feedback!' });
+            }
+          });
+  });
+
 
 
     //SPEAKERS
-    
+
         $("#saveSpeaker").click(function (e) {
         e.preventDefault();
         swal({ type: 'success', title: 'Speaker connected!' });
     })
-    
+
     $("#speakerCheckbox").click(function (e) {
         //TODO Não funciona
         e.preventDefault();
@@ -182,7 +203,7 @@ $(document).ready(function () {
             if (result.value) {
                 swal({ type: 'success', title: 'Speaker added successfully!' });
               }
-            });  
+            });
     });
 
     $("#partyCheckSuggest").click(function(e){
@@ -208,7 +229,7 @@ $(document).ready(function () {
         })
     });
 
-    
+
     $("#partyList").change(function(e){
         var str ="";
         $( "select option:selected" ).each(function() {
@@ -216,7 +237,7 @@ $(document).ready(function () {
         });
         window.location.href("party.html?name=" + str +"&username="+user);
     })
-    
+
     $("#homeButton").click(function(e){
         window.location.href("dashboard.html?username=" + user);
     })
