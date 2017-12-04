@@ -20,7 +20,7 @@ $(document).ready(function () {
         profileActive = true;
     }
     var isParty = false;
-    if (party.length >0){
+    if (party != null){
         isParty=true;
     }
     

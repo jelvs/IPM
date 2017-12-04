@@ -338,5 +338,9 @@ $(document).ready(function () {
                 break;
         }
     });
+    
+    $("#logo").click(function(e){
+        window.location.href = "dashboard.html?username=" + user;
+    })
 
 });

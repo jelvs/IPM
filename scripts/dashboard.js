@@ -235,11 +235,23 @@ $(document).ready(function () {
         $( "select option:selected" ).each(function() {
             str = $( this ).text() + " ";
         });
-        window.location.href("party.html?name=" + str +"&username="+user);
+        window.location.href = "party.html?name=" + str +"&username="+user;
     })
 
     $("#homeButton").click(function(e){
-        window.location.href("dashboard.html?username=" + user);
+        window.location.href = "dashboard.html?username=" + user;
+    })
+    
+    $("#logo").click(function(e){
+        window.location.href = "dashboard.html?username=" + user;
+    })
+    
+    $("#linkedYoutube").click(function(e){
+        window.location.href = "youtube.html?username=" + user;
+    })
+    
+    $("#linkedSpotify").click(function(e){
+        window.location.href = "spotify.html?username=" + user;
     })
 
 });

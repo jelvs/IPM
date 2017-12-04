@@ -24,8 +24,13 @@
         <!-- JS -->
         <script src="scripts/player.js" type="text/javascript"></script>
         <script src="scripts/dashboard.js" type="text/javascript"></script>
-        <script src="scripts/login.js" type="text/javascript"></script>
         <script src="scripts/spotify.js" type="text/javascript"></script>
+        
+        <!-- Cenarios -->
+        <script src="scripts/Maria.js" type="text/javascript"></script>
+        <script src="scripts/Rodrigo.js" type="text/javascript"></script>
+        <script src="scripts/Jose.js" type="text/javascript"></script>
+
 
         <link rel="icon" href="favicon.png">
         <title>SpotifyBoard</title>
@@ -35,7 +40,7 @@
         <div class="header">
             <div class="row">
                 <div class="col-sm-12 col-md-3 col-lg-2">
-                    <a href="index.html"><img src="logo.png" class="mainLogo" alt="MainLogo" style="position: relative; left: 30px;"></a>
+                    <a id="logo" href="#"><img src="logo.png" class="mainLogo" alt="MainLogo" style="position: relative; left: 30px;"></a>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-8">
                     <div class="col-sm-6 col-md-4">
@@ -53,12 +58,12 @@
                           <i class="fa fa-user"></i>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="btnProfileDrop">
-                            <a class="dropdown-item" href="dashboard.html">Dashboard</a>
-                            <a class="dropdown-item" href="maintenance.html">Account Settings</a>
-                            <a class="dropdown-item" href="maintenance.html">Audio Settings</a>
+                            <a class="dropdown-item" id="homeButton">Dashboard</a>
+                            <a class="dropdown-item notImplemented">Account Settings</a>
+                            <a class="dropdown-item notImplemented">Audio Settings</a>
                             <a class="dropdown-item " id="reportI" href="#">Report an issue!</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="maintenance.html">Help?</a>
+                            <a class="dropdown-item notImplemented">Help?</a>
                             <a class="dropdown-item" href="index.html">Logout</a>
                         </div>
                     </div>
@@ -73,11 +78,11 @@
                         <div class="card">
                             <div class="card-header h5">Linked Apps</div>
                             <div class="card-body text-center">
-                                <p class="card-text" id="linkedApps"><font color="black"><b>Youtube </b></font><a href="Youtube.html">Browse...</a></p>
-                                <p class="card-text" id="linkedApps"><font color="black"><b>Spotify </b></font><a href="Spotify.html">Browse...</a></p>
-                                <p class="card-text notSignInD" id="linkedApps">Deezer <a href="#">Browse...</a></p>
-                                <p class="card-text notSignInA" id="linkedApps">Apple Music <a href="#">Browse...</a></p>
-                                <p class="card-text notSignInS" id="linkedApps">SoundCloud <a href="#">Browse...</a></p>
+                                <p class="card-text"><font color="black"><b>Youtube </b></font><a id="linkedYoutube" href="#">Browse...</a></p>
+                                <p class="card-text"><font color="black"><b>Spotify </b></font><a id="linkedSpotify" href="#">Browse...</a></p>
+                                <p class="card-text notSignInD">Deezer <a href="#">Browse...</a></p>
+                                <p class="card-text notSignInA">Apple Music <a href="#">Browse...</a></p>
+                                <p class="card-text notSignInS">SoundCloud <a href="#">Browse...</a></p>
                                 <br>
                                 <a href="login.html" type="button" class="btn btn-primary "><i class="fa fa-plus"></i></a>
                             </div>
@@ -87,7 +92,7 @@
                         <div class="card">
                             <div class="card-header h5">
                                 Local music
-                                <a type="button" class="btn btn-First btn-md" href="dashboard.html">
+                                <a type="button" class="btn btn-First btn-md" id="homeButton">
                                   <i class="fa fa-home"></i>
                                 </a>
                             </div>
@@ -480,37 +485,7 @@
                               </div>
                         </div>
                     </div>
-                    <div class="row pt-2">
-                        <div class="col-sm-12 col-md-6">
-                            <div class="row card">
-                                <div class="card-header h5">Party</div>
-                                <div class="card-body">
-                                    <select class="form-control" id="musicApps">
-                                        <option selected>List of Party's</option>
-                                        <option value="1">Home Study</option>
-                                        <option value="2">Home Party</option>
-                                        <option value="3">Geek friends</option>
-                                    </select>
-                                    <br>
-                                    <a href="#" type="button" class="btn btn-primary notImplemented"><i class="fa fa-plus"></i></a>
-                                    <a href="#" type="button" class="btn btn-primary notImplemented"><i class="fa fa-user-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <div class="row card">
-                                <div class="card-header h5">Connected Speakers</div>
-                                <div class="card-body">
-                                    <div class="conn-speakers">
-                                    <div id="speakers"></div>
-                                    <br>
-                                    <a href="#" type="button" class="btn btn-primary" id="newSpeaker"><i class="fa fa-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row alert alert-dark" role="alert" id="media">
+                    <div class="row alert alert-dark pt-2" role="alert" id="media">
                         <div class="col-sm-12 col-md-12 col-lg-12">
                             <div>
                                 <marquee><font color="#3399ff"><b> Up Next: </b></font>  Back In Black (<font color="#3399ff">By: </font> AC/DC)

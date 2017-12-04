@@ -38,7 +38,7 @@
         <div class="header">
             <div class="row">
                 <div class="col-sm-12 col-md-3 col-lg-2">
-                    <a href="index.html"><img src="logo.png" class="mainLogo" alt="MainLogo" style="position: relative; left: 30px;"></a>
+                    <a id="logo" href="#"><img src="logo.png" class="mainLogo" alt="MainLogo" style="position: relative; left: 30px;"></a>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-8">
                     <div class="col-sm-6 col-md-4">
@@ -56,12 +56,11 @@
                           <i class="fa fa-user"></i>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="btnProfileDrop">
-                            <a class="dropdown-item" href="dashboard.html">Dashboard</a>
-                            <a class="dropdown-item" href="maintenance.html">Account Settings</a>
-                            <a class="dropdown-item" href="maintenance.html">Audio Settings</a>
+                            <a class="dropdown-item notImplemented" href="#">Account Settings</a>
+                            <a class="dropdown-item notImplemented" href="#">Audio Settings</a>
                             <a class="dropdown-item " id="reportI" href="#">Report an issue!</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="maintenance.html">Help?</a>
+                            <a class="dropdown-item notImplemented">Help?</a>
                             <a class="dropdown-item" href="index.html">Logout</a>
                         </div>
                     </div>
@@ -76,11 +75,11 @@
                         <div class="card">
                             <div class="card-header h5">Linked Apps</div>
                             <div class="card-body text-center">
-                              <p class="card-text" id="linkedApps"><font color="black"><b>Youtube </b></font><a href="Youtube.html">Browse...</a></p>
-                              <p class="card-text" id="linkedApps"><font color="black"><b>Spotify </b></font><a href="Spotify.html">Browse...</a></p>
-                                <p class="card-text notSignInD" id="linkedApps">Deezer <a href="#">Browse...</a></p>
-                                <p class="card-text notSignInA" id="linkedApps">Apple Music <a href="#">Browse...</a></p>
-                                <p class="card-text notSignInS" id="linkedApps">SoundCloud <a href="#">Browse...</a></p>
+                              <p class="card-text"><font color="black"><b>Youtube </b></font><a id="linkedYoutube" href="#">Browse...</a></p>
+                              <p class="card-text"><font color="black"><b>Spotify </b></font><a id="linkedSpotify" href="#">Browse...</a></p>
+                                <p class="card-text notSignInD">Deezer <a href="#">Browse...</a></p>
+                                <p class="card-text notSignInA">Apple Music <a href="#">Browse...</a></p>
+                                <p class="card-text notSignInS">SoundCloud <a href="#">Browse...</a></p>
                                 <br>
                                 <a href="login.html" type="button" class="btn btn-primary "><i class="fa fa-plus"></i></a>
                             </div>
@@ -163,7 +162,7 @@
                                     <div class="conn-speakers">
                                     <div id="speakers"></div>
                                     <br>
-                                    <a href="#" type="button" class="btn btn-primary" id="newSpeaker"><i class="fa fa-plus"></i></a>
+                                    <a href="#" type="button" class="btn btn-primary" title="New Speaker" id="newSpeaker"><i class="fa fa-plus"></i></a>
                                     <a href="#" type="button" class="btn btn-success" title="Connect/Disconnect" id="saveSpeaker"><i class="fa fa-plug"></i></a>
                                     <a href="#" type="button" class="btn btn-danger notImplemented" title="Delete" id="deleteSpeaker"><i class="fa fa-trash"></i></a>
                                     </div>
