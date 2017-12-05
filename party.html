@@ -138,7 +138,7 @@
                     </div>
                     <div class="row pt-2">
                         <div class="col-sm-12 col-md-6 col-lg-6">
-                            <div class="row card">
+                            <div class="card">
                                 <div class="card-header h5">Management</div>
                                 <div class="card-body">
                                     <select class="form-control" id="management">
@@ -156,7 +156,7 @@
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
-                            <div class="row card">
+                            <div class="card">
                                 <div class="card-header h5">Connected Speakers</div>
                                 <div class="card-body">
                                     <div class="conn-speakers">
@@ -169,42 +169,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row alert alert-dark" role="alert" id="media">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <div>
-                                <marquee><font color="#088da5"><b> Up Next: </b></font>  Back In Black (<font color="blue">By: </font> AC/DC)
-                                    <div id="nowPlaying"></div>
-                                </marquee>
-                            </div>
-                            <hr>
-
-                            <div class="row">
-                                <div class="col-sm-12 col-md-8 col-lg-8">
-                                    <a><font color="#088da5"><b> Current Song: </b></font> Californication (<font color="blue">By: </font> Red Hot Chilli Peppers)</a>
-                                </div>
-                                <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <a><font color="#088da5"><b> Current Party: </b></font> Home Study </a>
-                                </div>
-                            </div>
-
-                            <!--<i class="fa fa-pause-circle-o fa-2x invisible" id="pause"></i>-->
-                            <!--<i class="fa fa-play-circle-o fa-2x" id="play"></i>-->
-
-                            <p></p>
-
-                            <div class="offset-sm-3 offset-md-3 offset-lg-3">
-                                <i class="fa fa-stop-circle-o fa-2x" id="stop"></i>
-                                <i class="fa fa-backward fa-2x" id="backward"></i>
-                                <i class="fa fa-repeat fa-2x" id="repeat"></i>
-                                <audio controls played preload="metadata" id="player">
-                                    <source src="media/Californication_RHCP.mp3" type="audio/mpeg"> Your browser does not support the audio element.
-                                </audio>
-                                <i class="fa fa-random fa-2x" id="random"></i>
-                                <i class="fa fa-forward fa-2x" id="forward"></i>
-                            </div>
-
-                            </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-2" id="right">
@@ -234,30 +198,63 @@
                         <div class="card">
                             <div class="card-header h5"> Share</div>
                             <div class="card-body">
-                                <button type="button" class="btn btn-primary"><i class="fa fa-music" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Music</i>
-                                    <div class="dropdown-menu" aria-labelledby="btnProfileDrop">
-                                      <a class="dropdown-item notImplemented" href="#"><b>Share To :</b></a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item notImplemented" href="#">Facebook <img src="fb.png" style="width:40px;height:40px;"></a>
-                                        <a class="dropdown-item notImplemented" href="#">Instagram <img src="IG.png" style="width:40px;height:40px;"></a>
-                                        <a class="dropdown-item notImplemented" href="#">Twitter <img src="tw.png" style="width:40px;height:40px;"></a>
-                                    </div>
-                                </button>
-                                <button type="button" class="btn btn-primary "><i class="fa fa-list-ol" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Playlist</i>
-                                  <div class="dropdown-menu" aria-labelledby="btnProfileDrop">
-                                    <a class="dropdown-item notImplemented" href="#"><b>Share To :</b></a>
+                                <a href="#" type="button" role="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-music">Music</i>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="btnProfileDrop">
+                                    <a class="dropdown-item"><b>Share To :</b></a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item notImplemented" href="#">Facebook <img src="fb.png" style="width:40px;height:40px;"></a>
+                                    <a class="dropdown-item notImplemented" href="#">Instagram <img src="IG.png" style="width:40px;height:40px;"></a>
+                                    <a class="dropdown-item notImplemented" href="#">Twitter <img src="tw.png" style="width:40px;height:40px;"></a>
+                                </div>
+                                <a href="#" type="button" role="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-list-ol">Playlist</i>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="btnProfileDrop">
+                                    <a class="dropdown-item"><b>Share To :</b></a>
                                       <div class="dropdown-divider"></div>
                                       <a class="dropdown-item notImplemented" href="#">Facebook <img src="fb.png" style="width:40px;height:40px;"></a>
                                       <a class="dropdown-item notImplemented" href="#">Instagram <img src="IG.png" style="width:40px;height:40px;"></a>
                                       <a class="dropdown-item notImplemented" href="#">Twitter <img src="tw.png" style="width:40px;height:40px;"></a>
-                                  </div>
-                                </button>
+                                </div>
                             </div>
-                          </div>
                         </div>
                    </div>
                 </div>
             </div>
         </div>
     </body>
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="alert alert-dark" role="alert" id="media">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                            <a><font size="2px"><font color="#088da5"><b> Current Song: </b></font> Californication (<font color="#088da5">By: </font> Red Hot Chilli Peppers)</font></a>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <marquee><font color="#088da5"><b> Up Next: </b></font>  Back In Black (<font color="#088da5">By: </font> AC/DC)
+                            <div id="nowPlaying"></div>
+                        </marquee>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 text-right">
+                        <font size="2px"><font color="#088da5"><b> Current Party: </b></font> Home Study </font>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 offset-md-2">
+                        <i class="fa fa-stop-circle-o fa-2x" id="stop"></i>
+                        <i class="fa fa-backward fa-2x" id="backward"></i>
+                        <i class="fa fa-repeat" id="repeat"></i>
+                        <audio controls played preload="metadata" id="player">
+                            <source src="media/Californication_RHCP.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+                        </audio>
+                        <i class="fa fa-random" id="random"></i>
+                        <i class="fa fa-forward fa-2x" id="forward"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </html>

@@ -17,7 +17,7 @@ $(document).ready(function () {
     var user = getUrlParameter('username');
     $("#loggedUser").html(user);
 
-    $("#homeButton").click(function(e){
+    $(".homeButton").click(function(e){
         window.location.href = "dashboard.html?username=" + user;
     })
     
